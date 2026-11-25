@@ -41,7 +41,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
     <Reveal delay={(index % 3) * 0.07}>
       <Link
         to={`/project/${project.slug}`}
-        className="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/8 bg-surface shadow-[0_2px_12px_-6px_rgba(0,0,0,0.5)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_-20px_rgba(23,32,51,0.25)]"
+        className="group flex h-full flex-col overflow-hidden rounded-2xl border border-navy/8 bg-surface shadow-[0_2px_12px_-6px_rgba(23,32,51,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_-20px_rgba(23,32,51,0.25)]"
       >
         <div className="overflow-hidden">
           {project.images?.[0] ? (
@@ -68,13 +68,13 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             {project.description}
           </p>
           <div className="mt-4 flex flex-wrap gap-1.5 pt-1">
-            <span className="rounded-full bg-white/5 px-2.5 py-1 text-xs font-medium text-ink/80">
+            <span className="rounded-full bg-paper px-2.5 py-1 text-xs font-medium text-ink/80">
               {project.category}
             </span>
             {project.tools.slice(0, 2).map((t) => (
               <span
                 key={t}
-                className="rounded-full bg-white/5 px-2.5 py-1 text-xs font-medium text-ink/60"
+                className="rounded-full bg-paper px-2.5 py-1 text-xs font-medium text-ink/60"
               >
                 {t}
               </span>
@@ -110,7 +110,7 @@ export default function Projects() {
                 'cursor-pointer rounded-full px-4 py-2 text-sm font-medium transition-colors',
                 filter === f
                   ? 'bg-brand text-white'
-                  : 'border border-navy/12 bg-white/5 text-ink/70 hover:border-brand/40 hover:text-brand',
+                  : 'border border-navy/12 bg-paper text-ink/70 hover:border-brand/40 hover:text-brand',
               )}
             >
               {f}
@@ -121,7 +121,7 @@ export default function Projects() {
         {/* DCDA recognition feature */}
         {filter === 'All' && (
           <Reveal delay={0.08} className="mt-8">
-            <div className="flex flex-col gap-4 rounded-2xl border border-brand/25 bg-pale/60 p-6 md:flex-row md:items-center md:gap-6 md:p-8">
+            <div className="flex flex-col gap-4 rounded-2xl border border-brand/25 bg-pale p-6 md:flex-row md:items-center md:gap-6 md:p-8">
               <span className="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-brand text-white">
                 <Award size={28} />
               </span>

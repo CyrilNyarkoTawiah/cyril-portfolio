@@ -21,7 +21,7 @@ export default function Skills() {
                   </span>
                   <h3 className="font-display mt-4 text-lg font-bold text-ink">{g.title}</h3>
                   <p className="mt-1 text-sm text-steel">{g.description}</p>
-                  <ul className="mt-4 flex flex-col gap-2 border-t border-white/8 pt-4">
+                  <ul className="mt-4 flex flex-col gap-2 border-t border-navy/6 pt-4">
                     {g.skills.map((s) => (
                       <li key={s} className="flex items-center gap-2.5 text-sm text-ink/80">
                         <span aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rounded-full bg-brand" />

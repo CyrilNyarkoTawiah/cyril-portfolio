@@ -126,7 +126,7 @@ export default function Nav() {
           })}
           <button
             onClick={() => goTo('contact')}
-            className="group inline-flex cursor-pointer items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-[15px] font-semibold text-white transition-colors hover:bg-brand-deep"
+            className="group inline-flex cursor-pointer items-center gap-2 rounded-full bg-navy px-5 py-2.5 text-[15px] font-semibold text-white transition-colors hover:bg-navy/90"
           >
             Let&rsquo;s Talk
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
@@ -146,7 +146,7 @@ export default function Nav() {
 
       {/* Mobile sheet */}
       {open && (
-        <div className="border-t border-white/10 bg-paper px-5 pb-6 pt-2 lg:hidden">
+        <div className="border-t border-navy/8 bg-paper px-5 pb-6 pt-2 lg:hidden">
           <ul className="flex flex-col">
             {navLinks.map((link) => (
               <li key={link.href}>
@@ -161,7 +161,7 @@ export default function Nav() {
           </ul>
           <button
             onClick={() => goTo('contact')}
-            className="mt-5 inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-brand px-5 py-3 font-semibold text-white hover:bg-brand-deep"
+            className="mt-5 inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-navy px-5 py-3 font-semibold text-white hover:bg-navy/90"
           >
             Let&rsquo;s Talk <ArrowRight size={16} />
           </button>

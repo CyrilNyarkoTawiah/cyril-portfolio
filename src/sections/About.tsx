@@ -23,7 +23,7 @@ export default function About() {
             <a
               href={site.cvUrl}
               download="Cyril_Tawiah_CV_v5.pdf"
-              className="group mt-2 inline-flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 font-semibold text-ink transition-colors hover:border-brand hover:text-brand"
+              className="group mt-2 inline-flex w-fit items-center gap-2 rounded-full border border-navy/15 bg-white px-6 py-3 font-semibold text-ink transition-colors hover:border-brand hover:text-brand"
             >
               <Download size={17} className="text-brand" />
               Download CV

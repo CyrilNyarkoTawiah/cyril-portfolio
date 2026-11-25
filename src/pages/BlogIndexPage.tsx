@@ -26,7 +26,7 @@ export default function BlogIndexPage() {
             <Reveal key={post.slug} delay={i * 0.05}>
               <Link
                 to={`/blog/${post.slug}`}
-                className="group grid gap-5 overflow-hidden rounded-2xl border border-white/8 bg-surface p-4 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_36px_-20px_rgba(23,32,51,0.25)] sm:grid-cols-[240px_1fr] md:grid-cols-[280px_1fr]"
+                className="group grid gap-5 overflow-hidden rounded-2xl border border-navy/8 bg-surface p-4 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_36px_-20px_rgba(23,32,51,0.25)] sm:grid-cols-[240px_1fr] md:grid-cols-[280px_1fr]"
               >
                 {post.image && (
                   <div className="overflow-hidden rounded-xl">

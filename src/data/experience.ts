@@ -9,7 +9,7 @@ export interface Role {
 
 export const roles: Role[] = [
   {
-    title: 'Senior Graphic Designer / Technical Officer',
+    title: 'Senior Graphic Designer / Senior Technical Officer',
     organisation: 'CSIR – Institute for Scientific and Technological Information (INSTI)',
     period: 'August 2022 — Present',
     location: 'Accra, Ghana',

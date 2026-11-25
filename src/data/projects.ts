@@ -112,7 +112,7 @@ export const projects: Project[] = [
     description:
       'An exhibition-selected reimagining of the Autumn Estates development, shown at the DCDA Long Beach International Design Invitation Exhibition.',
     tools: ['3D Modelling', 'Rendering', 'Presentation Design'],
-    images: [apex1, apex2, apex3, apex4, apex5, apex6, apex7, apex8, apex9, apex10, apex11, apex12, apex13, apex14, apex15, apex16, apex17, apex18, apex19],
+    images: [apex12, apex1, apex2, apex3, apex4, apex5, apex6, apex7, apex8, apex9, apex10, apex11, apex13, apex14, apex15, apex16, apex17, apex18, apex19],
     year: '2024',
     recognition:
       'Best of the Best exhibitor — DCDA Long Beach International Design Invitation Exhibition, California State University, Long Beach, USA, 2024.',
@@ -120,6 +120,10 @@ export const projects: Project[] = [
       {
         label: 'View on Behance',
         url: 'https://www.behance.net/gallery/198041377/Project-Apex-Legends-Remodeling-Autumn-Estates',
+      },
+      {
+        label: 'Exhibition book — DCDA 2024',
+        url: 'https://fliphtml5.com/jikuw/zrts/DCDA2024Reutlingen_International_Exhibition/',
       },
     ],
     caseStudy: {
@@ -146,7 +150,7 @@ export const projects: Project[] = [
     description:
       'A complete 3D visualisation of the BlueCrest University College campus — featured on the university blog, intranet and YouTube, and in its most-watched Instagram Live.',
     tools: ['SketchUp Pro', 'Lumion 10', 'Lightroom', 'Filmora'],
-    images: [bluecrest1, bluecrest2, bluecrest3, bluecrest4, bluecrest5, bluecrest6, bluecrest7, bluecrest8, bluecrest9, bluecrest10, bluecrest11, bluecrest12, bluecrest13, bluecrest14, bluecrest15],
+    images: [bluecrest10, bluecrest1, bluecrest2, bluecrest3, bluecrest4, bluecrest5, bluecrest6, bluecrest7, bluecrest8, bluecrest9, bluecrest11, bluecrest12, bluecrest13, bluecrest14, bluecrest15],
     year: '2021',
     links: [
       {
@@ -366,7 +370,7 @@ export const projects: Project[] = [
     description:
       'Institutional citations designed for CSIR institutes — formal honours that carry the institutes’ identity with restraint.',
     tools: ['Adobe Illustrator', 'Print Design'],
-    images: [citations1, citations2, citations3, citations4, citations5, citations6, citations7, citations8],
+    images: [citations3, citations1, citations2, citations4, citations5, citations6, citations7, citations8],
     year: '2022 — Present',
     links: [
                 {

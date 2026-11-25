@@ -51,8 +51,8 @@ export default function Contact() {
   }
 
   const inputCls = (hasError?: string) =>
-    `w-full rounded-xl border bg-white/5 px-4 py-3 text-[15px] text-ink placeholder:text-steel/60 transition-colors focus:outline-none focus:ring-2 focus:ring-brand/40 ${
-      hasError ? 'border-red-400 focus:ring-red-300' : 'border-white/12 focus:border-brand'
+    `w-full rounded-xl border bg-white px-4 py-3 text-[15px] text-ink placeholder:text-steel/60 transition-colors focus:outline-none focus:ring-2 focus:ring-brand/40 ${
+      hasError ? 'border-red-400 focus:ring-red-300' : 'border-navy/12 focus:border-brand'
     }`
 
   return (

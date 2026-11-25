@@ -49,7 +49,7 @@ export default function BlogPostPage() {
             <img
               src={post.image}
               alt=""
-              className="aspect-[16/9] w-full rounded-2xl border border-white/8 object-cover"
+              className="aspect-[16/9] w-full rounded-2xl border border-navy/8 object-cover"
             />
           </Reveal>
         )}

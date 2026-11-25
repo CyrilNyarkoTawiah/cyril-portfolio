@@ -12,7 +12,7 @@ export interface Post {
   reviewed?: boolean
 }
 
-import bluecrest1 from '../assets/projects/bluecrest-1.webp'
+import bluecrest10 from '../assets/projects/bluecrest-10.webp'
 
 export const posts: Post[] = [
   {
@@ -23,7 +23,7 @@ export const posts: Post[] = [
     category: '3D Visualisation',
     date: '2026-11-25',
     readingTime: '4 min read',
-    image: bluecrest1,
+    image: bluecrest10,
     body: [
       {
         type: 'p',

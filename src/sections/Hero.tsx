@@ -62,7 +62,7 @@ export default function Hero() {
             </button>
             <button
               onClick={() => navigateToSection('contact')}
-              className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 font-semibold text-ink transition-colors hover:border-brand hover:text-brand"
+              className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-navy/15 bg-white px-6 py-3 font-semibold text-ink transition-colors hover:border-brand hover:text-brand"
             >
               Get in Touch
             </button>
@@ -90,7 +90,7 @@ export default function Hero() {
                 <Linkedin size={20} />
               </a>
             </div>
-            <span aria-hidden="true" className="h-5 w-px bg-white/15" />
+            <span aria-hidden="true" className="h-5 w-px bg-navy/15" />
             <p className="inline-flex items-center gap-1.5 text-sm text-steel">
               <MapPin size={15} className="text-brand" /> {site.location}
             </p>
@@ -107,7 +107,7 @@ export default function Hero() {
           {/* Pale green accent shape behind the photo */}
           <div
             aria-hidden="true"
-            className="absolute -right-4 -top-4 h-[112%] w-[88%] rotate-6 rounded-[32px] bg-brand/70"
+            className="absolute -right-4 -top-4 h-[112%] w-[88%] rotate-6 rounded-[32px] bg-brand/85"
           />
           <div
             aria-hidden="true"
