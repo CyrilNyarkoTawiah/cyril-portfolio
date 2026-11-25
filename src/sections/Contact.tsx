@@ -43,7 +43,7 @@ export default function Contact() {
       ``,
       fields.message,
       ``,
-      `— ${fields.name} (${fields.email})`,
+      `, ${fields.name} (${fields.email})`,
     ].join('\n')
     const url = `mailto:${site.email}?subject=${encodeURIComponent(fields.subject)}&body=${encodeURIComponent(body)}`
     window.location.href = url
@@ -182,8 +182,8 @@ export default function Contact() {
               </button>
               <p aria-live="polite" className="text-center text-xs leading-relaxed text-steel">
                 {sent
-                  ? 'Your email app is opening with the message ready — press send there and it lands in my inbox.'
-                  : 'This opens your email app with everything pre-filled — no data is collected on this site.'}
+                  ? 'Your email app is opening with the message ready, press send there and it lands in my inbox.'
+                  : 'This opens your email app with everything pre-filled, no data is collected on this site.'}
               </p>
             </form>
           </Reveal>

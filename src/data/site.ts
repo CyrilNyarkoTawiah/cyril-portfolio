@@ -3,7 +3,7 @@ export const site = {
   title: 'Designer · 3D Visualizer · Developer',
   motto: ['Creative thinking.', 'Technical execution.'],
   intro:
-    'I design, model and develop — from brand visuals and publications to immersive 3D visualisations, motion graphics and Android applications.',
+    'I design, model and develop, from brand visuals and publications to immersive 3D visualisations, motion graphics and Android applications.',
   location: 'Accra, Ghana',
   email: 'cyriltawiah9@gmail.com',
   phones: ['+233 550 292 767', '+233 560 030 144'],

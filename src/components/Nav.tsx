@@ -92,7 +92,7 @@ export default function Nav() {
       >
         <button
           onClick={goHome}
-          aria-label="Home — Cyril Nyarko Tawiah"
+          aria-label="Home, Cyril Nyarko Tawiah"
           className="shrink-0 cursor-pointer"
         >
           <CTLogo />

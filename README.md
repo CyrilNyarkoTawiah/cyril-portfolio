@@ -1,12 +1,12 @@
 # cyril-portfolio
 
-Personal portfolio of **Cyril Nyarko Tawiah** — Designer · 3D Visualizer · Developer.
+Personal portfolio of **Cyril Nyarko Tawiah**, Designer · 3D Visualizer · Developer.
 
 **Live:** https://cyrilnyarkotawiah.github.io/cyril-portfolio/
 
 - Single-page home (hero, about, projects, skills, blog, contact) + case-study and blog-article pages.
 - Built with React, Vite, Tailwind CSS v4, Framer Motion, Lucide icons.
-- Contact form opens the visitor's email app (mailto) — no backend.
+- Contact form opens the visitor's email app (mailto), no backend.
 - Deploys automatically to GitHub Pages on every push to `main`.
 
 ## Edit content
@@ -21,7 +21,7 @@ All content lives in `src/data/`:
 | `experience.ts` | Roles + education |
 | `skills.ts` | Skill groups |
 
-The hero photo is `src/assets/portrait.jpg` — replace that file to change it.
+The hero photo is `src/assets/portrait.jpg`, replace that file to change it.
 The CV linked on the site is `public/Cyril_Tawiah_CV_v5.pdf`.
 
 ## Dev
@@ -34,4 +34,4 @@ npm run preview    # serve the production build
 npm run typecheck
 ```
 
-Blog articles are drafts written from cited source material — review before promoting.
+Blog articles are drafts written from cited source material, review before promoting.

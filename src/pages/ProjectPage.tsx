@@ -27,9 +27,9 @@ export default function ProjectPage() {
   const project = getProject(slug)
 
   useEffect(() => {
-    if (project) document.title = `${project.title} — Cyril Nyarko Tawiah`
+    if (project) document.title = `${project.title}, Cyril Nyarko Tawiah`
     return () => {
-      document.title = 'Cyril Nyarko Tawiah — Designer · 3D Visualizer · Developer'
+      document.title = 'Cyril Nyarko Tawiah, Designer · 3D Visualizer · Developer'
     }
   }, [project])
 
@@ -105,7 +105,7 @@ export default function ProjectPage() {
               <Reveal key={img + i} delay={i * 0.06}>
                 <img
                   src={img}
-                  alt={`${project.title} — visual ${i + 1}`}
+                  alt={`${project.title}, visual ${i + 1}`}
                   className="aspect-[16/10] w-full rounded-2xl border border-navy/8 object-cover"
                 />
               </Reveal>
@@ -124,7 +124,7 @@ export default function ProjectPage() {
                 />
                 <p className="font-display text-xl font-bold text-white md:text-2xl">{project.title}</p>
                 <p className="text-sm text-white/70">
-                  Phone screenshots coming soon — see the repository for the app itself.
+                  Phone screenshots coming soon, see the repository for the app itself.
                 </p>
               </div>
             </div>

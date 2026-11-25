@@ -7,7 +7,7 @@ import { useState } from 'react'
 import { cn } from '../lib/cn'
 
 function ProjectCover({ project }: { project: Project }) {
-  // Designed brand cover for apps without real screenshots — never a fabricated UI image.
+  // Designed brand cover for apps without real screenshots, never a fabricated UI image.
   return (
     <div className="relative flex aspect-[16/10] items-center justify-center overflow-hidden bg-[#0a0f1b]">
       <div
@@ -127,12 +127,12 @@ export default function Projects() {
               </span>
               <div>
                 <p className="font-display text-lg font-bold text-ink md:text-xl">
-                  Best of the Best — DCDA Long Beach 2024
+                  Best of the Best, DCDA Long Beach 2024
                 </p>
                 <p className="mt-1 text-sm leading-relaxed text-ink/75 md:max-w-3xl">
                   Apex Legends: Autumn Estates Reimagined was selected as a Best of the Best
                   exhibitor at the DCDA Long Beach International Design Invitation Exhibition,
-                  California State University, Long Beach, USA —{' '}
+                  California State University, Long Beach, USA, {' '}
                   <Link to="/project/apex-autumn-estates" className="font-semibold text-brand underline underline-offset-2">
                     see the project
                   </Link>

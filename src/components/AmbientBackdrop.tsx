@@ -1,4 +1,4 @@
-/** Slow drifting glow orbs behind everything. Pure decoration — aria-hidden, no pointer events. */
+/** Slow drifting glow orbs behind everything. Pure decoration, aria-hidden, no pointer events. */
 const orbs = [
   { cls: 'bg-brand/[0.13]', style: { left: '-6%', top: '58%', width: '44rem', height: '44rem', '--dur': '38s', '--dx': '6vw' } },
   { cls: 'bg-[#3b5b94]/[0.16]', style: { left: '55%', top: '70%', width: '36rem', height: '36rem', '--dur': '30s', '--dx': '-5vw' } },

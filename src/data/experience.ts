@@ -10,8 +10,8 @@ export interface Role {
 export const roles: Role[] = [
   {
     title: 'Senior Graphic Designer / Senior Technical Officer',
-    organisation: 'CSIR – Institute for Scientific and Technological Information (INSTI)',
-    period: 'August 2022 — Present',
+    organisation: 'CSIR-Institute for Scientific and Technological Information (INSTI)',
+    period: 'August 2022–Present',
     location: 'Accra, Ghana',
     current: true,
     points: [
@@ -23,9 +23,9 @@ export const roles: Role[] = [
     ],
   },
   {
-    title: 'IT Management — National Service',
+    title: 'IT Management, National Service',
     organisation: 'Ghana Revenue Authority, Head Office',
-    period: '2021 — 2022',
+    period: '2021–2022',
     location: 'Accra, Ghana',
     points: [
       'Whiteboard animation for advertisements.',
@@ -36,7 +36,7 @@ export const roles: Role[] = [
   {
     title: 'Architectural Animator (3D Modelling)',
     organisation: 'Glover Limited and William and Co.',
-    period: '2019 — 2020',
+    period: '2019–2020',
     points: [
       '3D architectural rendering and animation.',
       'Estate visualisation.',
@@ -47,7 +47,7 @@ export const roles: Role[] = [
   {
     title: 'Graphic Designer',
     organisation: 'Spring Consult',
-    period: '2019 — 2020',
+    period: '2019–2020',
     location: 'Asylum Down, Accra',
     points: [
       'Design presentations and client consultations.',
@@ -73,13 +73,13 @@ export const education: Education[] = [
   {
     award: 'BSc, Information Technology',
     school: 'BlueCrest University College, Accra',
-    period: '2017 — 2021',
+    period: '2017–2021',
     note: 'Final-year project: Full campus 3D visualisation.',
   },
   {
     award: 'St. Thomas Aquinas Senior High School',
     school: 'Visual Art',
-    period: '2015 — 2017',
+    period: '2015–2017',
   },
 ]
 

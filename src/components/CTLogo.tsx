@@ -1,6 +1,6 @@
 import { cn } from '../lib/cn'
 
-/** The CT lettermark — navy C, green T. */
+/** The CT lettermark, navy C, green T. */
 export function CTMark({ className }: { className?: string }) {
   return (
     <span

@@ -97,7 +97,7 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Right column — portrait */}
+        {/* Right column, portrait */}
         <motion.div
           initial={reduce ? false : { opacity: 0, scale: 0.96, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}

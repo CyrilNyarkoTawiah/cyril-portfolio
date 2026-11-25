@@ -8,14 +8,14 @@ export default function About() {
   return (
     <section id="about" className="scroll-mt-24 py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
-        <SectionHeading eyebrow="About Me" title="Design, 3D and code — one practice" />
+        <SectionHeading eyebrow="About Me" title="Design, 3D and code, one practice" />
         <div className="mt-10 grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           {/* Left: bio */}
           <Reveal className="flex flex-col gap-5">
             <p className="text-lg leading-relaxed text-ink/90">{aboutIntro}</p>
             <p className="leading-relaxed text-steel">
-              At CSIR-INSTI I give a scientific institution its visual voice — annual reports,
-              publications, exhibitions and digitisation projects — while pursuing an MPhil in
+              At CSIR-INSTI I give a scientific institution its visual voice, annual reports,
+              publications, exhibitions and digitisation projects, while pursuing an MPhil in
               Information Systems at UPSA. Away from the desk I build Android apps that solve
               everyday Ghanaian problems: a video player for the parked car, a fuel tracker, a
               running companion that works offline.
@@ -65,7 +65,7 @@ export default function About() {
                   </div>
                   <p className="mt-1 text-sm font-medium text-brand">
                     {r.organisation}
-                    {r.location ? ` — ${r.location}` : ''}
+                    {r.location ? `, ${r.location}` : ''}
                   </p>
                   <ul className="mt-4 flex flex-col gap-1.5">
                     {r.points.map((p) => (
