@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
-import { ArrowLeft, CalendarDays, Clock } from 'lucide-react'
+import { ArrowLeft, CalendarDays, Clock, ExternalLink } from 'lucide-react'
 import { getPost } from '../data/posts'
 import { formatDate } from './BlogIndexPage'
 import Reveal from '../components/Reveal'
@@ -73,9 +73,33 @@ export default function BlogPostPage() {
                 </blockquote>
               )
             }
+            if (block.type === 'img') {
+              return (
+                <Reveal key={i} className="my-2">
+                  <img
+                    src={block.src}
+                    alt=""
+                    loading="lazy"
+                    className="w-full rounded-2xl border border-navy/8 object-cover"
+                  />
+                </Reveal>
+              )
+            }
             return <p key={i}>{block.text}</p>
           })}
         </div>
+
+        {post.reference && (
+          <a
+            href={post.reference.url}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-pale px-5 py-3 text-[15px] font-semibold text-ink transition-colors hover:text-brand"
+          >
+            <ExternalLink size={16} className="text-brand" />
+            {post.reference.label}
+          </a>
+        )}
       </div>
     </article>
   )
