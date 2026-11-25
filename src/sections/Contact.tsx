@@ -51,8 +51,8 @@ export default function Contact() {
   }
 
   const inputCls = (hasError?: string) =>
-    `w-full rounded-xl border bg-white px-4 py-3 text-[15px] text-navy placeholder:text-steel/60 transition-colors focus:outline-none focus:ring-2 focus:ring-brand/40 ${
-      hasError ? 'border-red-400 focus:ring-red-300' : 'border-navy/12 focus:border-brand'
+    `w-full rounded-xl border bg-white/5 px-4 py-3 text-[15px] text-ink placeholder:text-steel/60 transition-colors focus:outline-none focus:ring-2 focus:ring-brand/40 ${
+      hasError ? 'border-red-400 focus:ring-red-300' : 'border-white/12 focus:border-brand'
     }`
 
   return (
@@ -75,7 +75,7 @@ export default function Contact() {
                   <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-pale text-brand transition-colors group-hover:bg-brand group-hover:text-white">
                     <Mail size={19} />
                   </span>
-                  <span className="text-[15px] font-medium text-navy transition-colors group-hover:text-brand">
+                  <span className="text-[15px] font-medium text-ink transition-colors group-hover:text-brand">
                     {site.email}
                   </span>
                 </a>
@@ -85,7 +85,7 @@ export default function Contact() {
                   <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-pale text-brand transition-colors group-hover:bg-brand group-hover:text-white">
                     <Phone size={19} />
                   </span>
-                  <span className="text-[15px] font-medium text-navy transition-colors group-hover:text-brand">
+                  <span className="text-[15px] font-medium text-ink transition-colors group-hover:text-brand">
                     {site.phones.join('  ·  ')}
                   </span>
                 </a>
@@ -94,10 +94,10 @@ export default function Contact() {
                 <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-pale text-brand">
                   <MapPin size={19} />
                 </span>
-                <span className="text-[15px] font-medium text-navy">{site.location}</span>
+                <span className="text-[15px] font-medium text-ink">{site.location}</span>
               </li>
             </ul>
-            <div className="mt-2 flex items-center gap-4 text-navy">
+            <div className="mt-2 flex items-center gap-4 text-ink">
               <BehanceLink className="transition-colors hover:text-brand" />
               <a href={site.socials.github} target="_blank" rel="noreferrer" aria-label="GitHub" className="transition-colors hover:text-brand">
                 <Github size={20} />
@@ -110,10 +110,10 @@ export default function Contact() {
 
           {/* Form */}
           <Reveal delay={0.08}>
-            <form onSubmit={submit} noValidate className="flex flex-col gap-4 rounded-2xl border border-navy/8 bg-white p-6 shadow-[0_2px_12px_-6px_rgba(23,32,51,0.08)] md:p-8">
+            <form onSubmit={submit} noValidate className="flex flex-col gap-4 rounded-2xl border border-white/8 bg-surface p-6 shadow-[0_2px_12px_-6px_rgba(23,32,51,0.08)] md:p-8">
               <div className="grid gap-4 sm:grid-cols-2">
                 <div className="flex flex-col gap-1.5">
-                  <label htmlFor="cf-name" className="text-sm font-semibold text-navy">
+                  <label htmlFor="cf-name" className="text-sm font-semibold text-ink">
                     Full Name
                   </label>
                   <input
@@ -128,7 +128,7 @@ export default function Contact() {
                   {errors.name && <p className="text-xs text-red-500">{errors.name}</p>}
                 </div>
                 <div className="flex flex-col gap-1.5">
-                  <label htmlFor="cf-email" className="text-sm font-semibold text-navy">
+                  <label htmlFor="cf-email" className="text-sm font-semibold text-ink">
                     Email Address
                   </label>
                   <input
@@ -144,7 +144,7 @@ export default function Contact() {
                 </div>
               </div>
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="cf-subject" className="text-sm font-semibold text-navy">
+                <label htmlFor="cf-subject" className="text-sm font-semibold text-ink">
                   Subject
                 </label>
                 <input
@@ -159,7 +159,7 @@ export default function Contact() {
                 {errors.subject && <p className="text-xs text-red-500">{errors.subject}</p>}
               </div>
               <div className="flex flex-col gap-1.5">
-                <label htmlFor="cf-message" className="text-sm font-semibold text-navy">
+                <label htmlFor="cf-message" className="text-sm font-semibold text-ink">
                   Message
                 </label>
                 <textarea

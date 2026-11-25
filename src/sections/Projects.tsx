@@ -9,7 +9,7 @@ import { cn } from '../lib/cn'
 function ProjectCover({ project }: { project: Project }) {
   // Designed brand cover for apps without real screenshots — never a fabricated UI image.
   return (
-    <div className="relative flex aspect-[16/10] items-center justify-center overflow-hidden bg-navy">
+    <div className="relative flex aspect-[16/10] items-center justify-center overflow-hidden bg-[#0a0f1b]">
       <div
         aria-hidden="true"
         className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-brand/25 blur-2xl"
@@ -41,7 +41,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
     <Reveal delay={(index % 3) * 0.07}>
       <Link
         to={`/project/${project.slug}`}
-        className="group flex h-full flex-col overflow-hidden rounded-2xl border border-navy/8 bg-white shadow-[0_2px_12px_-6px_rgba(23,32,51,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_-20px_rgba(23,32,51,0.25)]"
+        className="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/8 bg-surface shadow-[0_2px_12px_-6px_rgba(0,0,0,0.5)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_-20px_rgba(23,32,51,0.25)]"
       >
         <div className="overflow-hidden">
           {project.images?.[0] ? (
@@ -57,7 +57,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         </div>
         <div className="flex flex-1 flex-col p-5">
           <div className="flex items-start justify-between gap-3">
-            <h3 className="font-display text-lg font-bold leading-snug text-navy">
+            <h3 className="font-display text-lg font-bold leading-snug text-ink">
               {project.title}
             </h3>
             <span className="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-pale text-brand transition-colors group-hover:bg-brand group-hover:text-white">
@@ -68,13 +68,13 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             {project.description}
           </p>
           <div className="mt-4 flex flex-wrap gap-1.5 pt-1">
-            <span className="rounded-full bg-paper px-2.5 py-1 text-xs font-medium text-navy/80">
+            <span className="rounded-full bg-white/5 px-2.5 py-1 text-xs font-medium text-ink/80">
               {project.category}
             </span>
             {project.tools.slice(0, 2).map((t) => (
               <span
                 key={t}
-                className="rounded-full bg-paper px-2.5 py-1 text-xs font-medium text-navy/60"
+                className="rounded-full bg-white/5 px-2.5 py-1 text-xs font-medium text-ink/60"
               >
                 {t}
               </span>
@@ -93,7 +93,7 @@ export default function Projects() {
   )
 
   return (
-    <section id="projects" className="scroll-mt-24 bg-white py-16 md:py-24">
+    <section id="projects" className="scroll-mt-24 bg-surface2/60 py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <SectionHeading eyebrow="Featured Projects" title="Selected Works" />
@@ -110,7 +110,7 @@ export default function Projects() {
                 'cursor-pointer rounded-full px-4 py-2 text-sm font-medium transition-colors',
                 filter === f
                   ? 'bg-brand text-white'
-                  : 'border border-navy/12 bg-paper text-navy/70 hover:border-brand/40 hover:text-brand',
+                  : 'border border-navy/12 bg-white/5 text-ink/70 hover:border-brand/40 hover:text-brand',
               )}
             >
               {f}
@@ -121,15 +121,15 @@ export default function Projects() {
         {/* DCDA recognition feature */}
         {filter === 'All' && (
           <Reveal delay={0.08} className="mt-8">
-            <div className="flex flex-col gap-4 rounded-2xl border border-brand/25 bg-pale p-6 md:flex-row md:items-center md:gap-6 md:p-8">
+            <div className="flex flex-col gap-4 rounded-2xl border border-brand/25 bg-pale/60 p-6 md:flex-row md:items-center md:gap-6 md:p-8">
               <span className="inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-brand text-white">
                 <Award size={28} />
               </span>
               <div>
-                <p className="font-display text-lg font-bold text-navy md:text-xl">
+                <p className="font-display text-lg font-bold text-ink md:text-xl">
                   Best of the Best — DCDA Long Beach 2024
                 </p>
-                <p className="mt-1 text-sm leading-relaxed text-navy/75 md:max-w-3xl">
+                <p className="mt-1 text-sm leading-relaxed text-ink/75 md:max-w-3xl">
                   Apex Legends: Autumn Estates Reimagined was selected as a Best of the Best
                   exhibitor at the DCDA Long Beach International Design Invitation Exhibition,
                   California State University, Long Beach, USA —{' '}

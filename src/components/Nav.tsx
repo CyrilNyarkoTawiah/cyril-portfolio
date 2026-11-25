@@ -110,7 +110,7 @@ export default function Nav() {
                 aria-current={isActive ? 'true' : undefined}
                 className={cn(
                   'relative cursor-pointer text-[15px] font-medium transition-colors',
-                  isActive ? 'text-brand' : 'text-navy/80 hover:text-navy',
+                  isActive ? 'text-brand' : 'text-ink/80 hover:text-ink',
                 )}
               >
                 {link.label}
@@ -126,7 +126,7 @@ export default function Nav() {
           })}
           <button
             onClick={() => goTo('contact')}
-            className="group inline-flex cursor-pointer items-center gap-2 rounded-full bg-navy px-5 py-2.5 text-[15px] font-semibold text-white transition-colors hover:bg-navy/90"
+            className="group inline-flex cursor-pointer items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-[15px] font-semibold text-white transition-colors hover:bg-brand-deep"
           >
             Let&rsquo;s Talk
             <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
@@ -135,7 +135,7 @@ export default function Nav() {
 
         {/* Mobile toggle */}
         <button
-          className="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-full text-navy lg:hidden"
+          className="inline-flex h-10 w-10 cursor-pointer items-center justify-center rounded-full text-ink lg:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
           aria-label={open ? 'Close menu' : 'Open menu'}
@@ -146,13 +146,13 @@ export default function Nav() {
 
       {/* Mobile sheet */}
       {open && (
-        <div className="border-t border-navy/8 bg-paper px-5 pb-6 pt-2 lg:hidden">
+        <div className="border-t border-white/10 bg-paper px-5 pb-6 pt-2 lg:hidden">
           <ul className="flex flex-col">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <button
                   onClick={() => goTo(link.href)}
-                  className="w-full cursor-pointer border-b border-navy/5 py-3.5 text-left font-display text-lg font-semibold text-navy"
+                  className="w-full cursor-pointer border-b border-white/10 py-3.5 text-left font-display text-lg font-semibold text-ink"
                 >
                   {link.label}
                 </button>
@@ -161,7 +161,7 @@ export default function Nav() {
           </ul>
           <button
             onClick={() => goTo('contact')}
-            className="mt-5 inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-navy px-5 py-3 font-semibold text-white"
+            className="mt-5 inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-brand px-5 py-3 font-semibold text-white hover:bg-brand-deep"
           >
             Let&rsquo;s Talk <ArrowRight size={16} />
           </button>

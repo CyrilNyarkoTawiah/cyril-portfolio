@@ -16,7 +16,7 @@ function BrandCover({ icon, title, coverIcon }: { icon?: string; title: string; 
     )
   }
   return (
-    <span className="inline-flex h-36 w-36 items-center justify-center rounded-[28px] bg-white/10 text-pale md:h-44 md:w-44">
+    <span className="inline-flex h-36 w-36 items-center justify-center rounded-[28px] bg-white/10 text-ink md:h-44 md:w-44">
       {coverIcon === 'route' ? <Route size={64} /> : <Car size={64} />}
     </span>
   )
@@ -36,7 +36,7 @@ export default function ProjectPage() {
   if (!project) {
     return (
       <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 px-5 pb-24 pt-40 text-center">
-        <h1 className="font-display text-3xl font-bold text-navy">Project not found</h1>
+        <h1 className="font-display text-3xl font-bold text-ink">Project not found</h1>
         <Link to="/" className="inline-flex items-center gap-2 font-semibold text-brand">
           <ArrowLeft size={17} /> Back to home
         </Link>
@@ -63,16 +63,16 @@ export default function ProjectPage() {
           <span className="rounded-full bg-pale px-3 py-1 text-xs font-semibold text-brand-deep">
             {project.category}
           </span>
-          <span className="rounded-full bg-paper px-3 py-1 text-xs font-medium text-steel">
+          <span className="rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-steel">
             {project.year}
           </span>
           {project.tools.map((t) => (
-            <span key={t} className="rounded-full bg-paper px-3 py-1 text-xs font-medium text-steel">
+            <span key={t} className="rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-steel">
               {t}
             </span>
           ))}
         </div>
-        <h1 className="font-display mt-5 max-w-4xl text-4xl font-extrabold leading-tight tracking-tight text-navy md:text-5xl">
+        <h1 className="font-display mt-5 max-w-4xl text-4xl font-extrabold leading-tight tracking-tight text-ink md:text-5xl">
           {project.title}
         </h1>
         <p className="mt-4 max-w-3xl text-lg leading-relaxed text-steel">{project.description}</p>
@@ -81,7 +81,7 @@ export default function ProjectPage() {
             <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-brand text-white">
               <Award size={24} />
             </span>
-            <p className="text-[15px] font-medium leading-relaxed text-navy">{project.recognition}</p>
+            <p className="text-[15px] font-medium leading-relaxed text-ink">{project.recognition}</p>
           </div>
         )}
         {project.links?.map((l) => (
@@ -106,14 +106,14 @@ export default function ProjectPage() {
                 <img
                   src={img}
                   alt={`${project.title} — visual ${i + 1}`}
-                  className="aspect-[16/10] w-full rounded-2xl border border-navy/8 object-cover"
+                  className="aspect-[16/10] w-full rounded-2xl border border-white/8 object-cover"
                 />
               </Reveal>
             ))}
           </div>
         ) : (
           <Reveal>
-            <div className="relative flex items-center justify-center overflow-hidden rounded-2xl bg-navy py-20 md:py-28">
+            <div className="relative flex items-center justify-center overflow-hidden rounded-2xl bg-[#0a0f1b] py-20 md:py-28">
               <div aria-hidden="true" className="absolute -right-16 -top-16 h-64 w-64 rounded-full bg-brand/25 blur-3xl" />
               <div aria-hidden="true" className="absolute -bottom-20 -left-12 h-64 w-64 rounded-full bg-pale/10 blur-3xl" />
               <div className="relative z-10 flex flex-col items-center gap-6">
@@ -123,7 +123,7 @@ export default function ProjectPage() {
                   coverIcon={project.coverIcon}
                 />
                 <p className="font-display text-xl font-bold text-white md:text-2xl">{project.title}</p>
-                <p className="text-sm text-white/60">
+                <p className="text-sm text-steel">
                   Phone screenshots coming soon — see the repository for the app itself.
                 </p>
               </div>
@@ -142,14 +142,14 @@ export default function ProjectPage() {
           ].map((block) => (
             <Reveal key={block.label}>
               <section>
-                <h2 className="font-display text-2xl font-bold text-navy">{block.label}</h2>
+                <h2 className="font-display text-2xl font-bold text-ink">{block.label}</h2>
                 <p className="mt-3 leading-relaxed text-steel">{block.text}</p>
               </section>
             </Reveal>
           ))}
           <Reveal>
             <section>
-              <h2 className="font-display text-2xl font-bold text-navy">Process</h2>
+              <h2 className="font-display text-2xl font-bold text-ink">Process</h2>
               <ol className="mt-4 flex flex-col gap-3">
                 {cs.process.map((step, i) => (
                   <li key={i} className="flex gap-3.5 leading-relaxed text-steel">
@@ -166,13 +166,13 @@ export default function ProjectPage() {
 
         <aside className="flex flex-col gap-6">
           <Reveal delay={0.06}>
-            <div className="rounded-2xl border border-navy/8 bg-white p-6">
-              <h3 className="flex items-center gap-2 font-display text-base font-bold text-navy">
+            <div className="rounded-2xl border border-white/8 bg-surface p-6">
+              <h3 className="flex items-center gap-2 font-display text-base font-bold text-ink">
                 <Wrench size={16} className="text-brand" /> Tools & technologies
               </h3>
               <ul className="mt-4 flex flex-wrap gap-2">
                 {project.tools.map((t) => (
-                  <li key={t} className="rounded-full bg-paper px-3 py-1.5 text-sm text-navy/80">
+                  <li key={t} className="rounded-full bg-white/5 px-3 py-1.5 text-sm text-ink/80">
                     {t}
                   </li>
                 ))}
@@ -181,8 +181,8 @@ export default function ProjectPage() {
           </Reveal>
           {cs.note && (
             <Reveal delay={0.1}>
-              <div className="rounded-2xl border border-navy/8 bg-paper p-6">
-                <h3 className="font-display text-base font-bold text-navy">Contribution</h3>
+              <div className="rounded-2xl border border-white/8 bg-surface p-6">
+                <h3 className="font-display text-base font-bold text-ink">Contribution</h3>
                 <p className="mt-2 flex gap-2 text-sm leading-relaxed text-steel">
                   <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-brand" />
                   {cs.note}
@@ -193,10 +193,10 @@ export default function ProjectPage() {
           <Reveal delay={0.14}>
             <Link
               to={`/project/${next.slug}`}
-              className="group flex items-center justify-between gap-4 rounded-2xl bg-navy p-6 text-white transition-colors hover:bg-navy/95"
+              className="group flex items-center justify-between gap-4 rounded-2xl border border-white/10 bg-surface p-6 text-white transition-colors hover:bg-surface/80"
             >
               <span className="flex flex-col">
-                <span className="text-xs uppercase tracking-wider text-white/50">Next project</span>
+                <span className="text-xs uppercase tracking-wider text-steel">Next project</span>
                 <span className="font-display text-lg font-bold">{next.title}</span>
               </span>
               <ArrowUpRight size={20} className="text-pale transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

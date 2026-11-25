@@ -10,7 +10,7 @@ export function CTMark({ className }: { className?: string }) {
         className,
       )}
     >
-      <span className="text-navy">C</span>
+      <span className="text-ink">C</span>
       <span className="text-brand">T</span>
     </span>
   )
@@ -22,12 +22,12 @@ export default function CTLogo({ variant = 'dark' }: { variant?: 'dark' | 'light
       <CTMark className={variant === 'dark' ? 'text-2xl' : 'text-2xl brightness-0 invert'} />
       <span
         aria-hidden="true"
-        className={cn('h-6 w-px', variant === 'dark' ? 'bg-navy/20' : 'bg-white/25')}
+        className={cn('h-6 w-px', variant === 'dark' ? 'bg-white/20' : 'bg-white/25')}
       />
       <span
         className={cn(
           'font-display text-base font-bold tracking-tight md:text-lg',
-          variant === 'dark' ? 'text-navy' : 'text-white',
+          variant === 'dark' ? 'text-ink' : 'text-white',
         )}
       >
         Cyril Nyarko Tawiah

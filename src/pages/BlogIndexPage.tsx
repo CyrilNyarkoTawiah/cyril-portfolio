@@ -15,7 +15,7 @@ export default function BlogIndexPage() {
   return (
     <div className="pb-20 pt-24 md:pt-32">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
-        <h1 className="font-display text-4xl font-extrabold tracking-tight text-navy md:text-5xl">
+        <h1 className="font-display text-4xl font-extrabold tracking-tight text-ink md:text-5xl">
           Insights & process notes
         </h1>
         <p className="mt-3 max-w-2xl leading-relaxed text-steel">
@@ -26,7 +26,7 @@ export default function BlogIndexPage() {
             <Reveal key={post.slug} delay={i * 0.05}>
               <Link
                 to={`/blog/${post.slug}`}
-                className="group grid gap-5 overflow-hidden rounded-2xl border border-navy/8 bg-white p-4 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_36px_-20px_rgba(23,32,51,0.25)] sm:grid-cols-[240px_1fr] md:grid-cols-[280px_1fr]"
+                className="group grid gap-5 overflow-hidden rounded-2xl border border-white/8 bg-surface p-4 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_36px_-20px_rgba(23,32,51,0.25)] sm:grid-cols-[240px_1fr] md:grid-cols-[280px_1fr]"
               >
                 {post.image && (
                   <div className="overflow-hidden rounded-xl">
@@ -42,7 +42,7 @@ export default function BlogIndexPage() {
                   <span className="text-xs font-semibold uppercase tracking-wider text-brand">
                     {post.category}
                   </span>
-                  <h2 className="font-display text-xl font-bold text-navy md:text-2xl">{post.title}</h2>
+                  <h2 className="font-display text-xl font-bold text-ink md:text-2xl">{post.title}</h2>
                   <p className="line-clamp-2 text-sm leading-relaxed text-steel">{post.description}</p>
                   <p className="mt-auto flex items-center gap-4 pt-2 text-xs text-steel/80">
                     <span className="inline-flex items-center gap-1.5">

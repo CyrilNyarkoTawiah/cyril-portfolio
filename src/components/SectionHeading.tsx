@@ -29,7 +29,7 @@ export default function SectionHeading({
         <span aria-hidden="true" className="h-0.5 w-8 rounded-full bg-brand" />
         {eyebrow}
       </span>
-      <Tag className="font-display text-3xl font-bold tracking-tight text-navy md:text-4xl">
+      <Tag className="font-display text-3xl font-bold tracking-tight text-ink md:text-4xl">
         {title}
       </Tag>
     </Reveal>

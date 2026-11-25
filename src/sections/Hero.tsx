@@ -25,7 +25,7 @@ export default function Hero() {
           </motion.p>
           <motion.h1
             {...item(0.08)}
-            className="font-display mt-3 text-5xl font-extrabold leading-[1.04] tracking-tight text-navy md:text-6xl lg:text-[64px]"
+            className="font-display mt-3 text-5xl font-extrabold leading-[1.04] tracking-tight text-ink md:text-6xl lg:text-[64px]"
           >
             Cyril Nyarko
             <br />
@@ -43,7 +43,7 @@ export default function Hero() {
             <span className="font-display block text-2xl font-bold text-brand md:text-[28px]">
               {site.motto[0]}
             </span>
-            <span className="font-display block text-2xl font-bold text-navy md:text-[28px]">
+            <span className="font-display block text-2xl font-bold text-ink md:text-[28px]">
               {site.motto[1]}
             </span>
           </motion.p>
@@ -62,14 +62,14 @@ export default function Hero() {
             </button>
             <button
               onClick={() => navigateToSection('contact')}
-              className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-navy/15 bg-white px-6 py-3 font-semibold text-navy transition-colors hover:border-brand hover:text-brand"
+              className="inline-flex cursor-pointer items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 font-semibold text-ink transition-colors hover:border-brand hover:text-brand"
             >
               Get in Touch
             </button>
           </motion.div>
 
           <motion.div {...item(0.5)} className="mt-9 flex items-center gap-5">
-            <div className="flex items-center gap-4 text-navy">
+            <div className="flex items-center gap-4 text-ink">
               <BehanceLink className="transition-colors hover:text-brand" />
               <a
                 href={site.socials.github}
@@ -90,7 +90,7 @@ export default function Hero() {
                 <Linkedin size={20} />
               </a>
             </div>
-            <span aria-hidden="true" className="h-5 w-px bg-navy/15" />
+            <span aria-hidden="true" className="h-5 w-px bg-white/15" />
             <p className="inline-flex items-center gap-1.5 text-sm text-steel">
               <MapPin size={15} className="text-brand" /> {site.location}
             </p>
@@ -107,7 +107,7 @@ export default function Hero() {
           {/* Pale green accent shape behind the photo */}
           <div
             aria-hidden="true"
-            className="absolute -right-4 -top-4 h-[112%] w-[88%] rotate-6 rounded-[32px] bg-brand/85"
+            className="absolute -right-4 -top-4 h-[112%] w-[88%] rotate-6 rounded-[32px] bg-brand/70"
           />
           <div
             aria-hidden="true"

@@ -12,7 +12,7 @@ export default function About() {
         <div className="mt-10 grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           {/* Left: bio */}
           <Reveal className="flex flex-col gap-5">
-            <p className="text-lg leading-relaxed text-navy/90">{aboutIntro}</p>
+            <p className="text-lg leading-relaxed text-ink/90">{aboutIntro}</p>
             <p className="leading-relaxed text-steel">
               At CSIR-INSTI I give a scientific institution its visual voice — annual reports,
               publications, exhibitions and digitisation projects — while pursuing an MPhil in
@@ -23,7 +23,7 @@ export default function About() {
             <a
               href={site.cvUrl}
               download="Cyril_Tawiah_CV_v5.pdf"
-              className="group mt-2 inline-flex w-fit items-center gap-2 rounded-full border border-navy/15 bg-white px-6 py-3 font-semibold text-navy transition-colors hover:border-brand hover:text-brand"
+              className="group mt-2 inline-flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 font-semibold text-ink transition-colors hover:border-brand hover:text-brand"
             >
               <Download size={17} className="text-brand" />
               Download CV
@@ -36,7 +36,7 @@ export default function About() {
               <ul className="mt-4 flex flex-col gap-4">
                 {education.map((e) => (
                   <li key={e.award} className="border-l-2 border-pale pl-4">
-                    <p className="font-semibold text-navy">{e.award}</p>
+                    <p className="font-semibold text-ink">{e.award}</p>
                     <p className="text-sm text-steel">
                       {e.school} · {e.period}
                     </p>
@@ -51,9 +51,9 @@ export default function About() {
           <div className="flex flex-col gap-8">
             {roles.map((r, i) => (
               <Reveal key={r.title + r.period} delay={i * 0.06}>
-                <article className="rounded-2xl border border-navy/8 bg-white p-6 shadow-[0_2px_12px_-6px_rgba(23,32,51,0.08)] md:p-7">
+                <article className="rounded-2xl border border-white/8 bg-surface p-6 shadow-[0_2px_12px_-6px_rgba(23,32,51,0.08)] md:p-7">
                   <div className="flex flex-wrap items-baseline justify-between gap-2">
-                    <h3 className="font-display text-lg font-bold text-navy">{r.title}</h3>
+                    <h3 className="font-display text-lg font-bold text-ink">{r.title}</h3>
                     <span
                       className={
                         'rounded-full px-3 py-1 text-xs font-semibold ' +

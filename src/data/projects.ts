@@ -1,15 +1,59 @@
 import apex1 from '../assets/projects/apex-1.webp'
 import apex2 from '../assets/projects/apex-2.webp'
 import apex3 from '../assets/projects/apex-3.webp'
+import apex4 from '../assets/projects/apex-4.webp'
+import apex5 from '../assets/projects/apex-5.webp'
+import apex6 from '../assets/projects/apex-6.webp'
+import apex7 from '../assets/projects/apex-7.webp'
+import apex8 from '../assets/projects/apex-8.webp'
+import apex9 from '../assets/projects/apex-9.webp'
+import apex10 from '../assets/projects/apex-10.webp'
+import apex11 from '../assets/projects/apex-11.webp'
+import apex12 from '../assets/projects/apex-12.webp'
+import apex13 from '../assets/projects/apex-13.webp'
+import apex14 from '../assets/projects/apex-14.webp'
+import apex15 from '../assets/projects/apex-15.webp'
+import apex16 from '../assets/projects/apex-16.webp'
+import apex17 from '../assets/projects/apex-17.webp'
+import apex18 from '../assets/projects/apex-18.webp'
+import apex19 from '../assets/projects/apex-19.webp'
 import bluecrest1 from '../assets/projects/bluecrest-1.webp'
 import bluecrest2 from '../assets/projects/bluecrest-2.webp'
 import bluecrest3 from '../assets/projects/bluecrest-3.webp'
+import bluecrest4 from '../assets/projects/bluecrest-4.webp'
+import bluecrest5 from '../assets/projects/bluecrest-5.webp'
+import bluecrest6 from '../assets/projects/bluecrest-6.webp'
+import bluecrest7 from '../assets/projects/bluecrest-7.webp'
+import bluecrest8 from '../assets/projects/bluecrest-8.webp'
+import bluecrest9 from '../assets/projects/bluecrest-9.webp'
+import bluecrest10 from '../assets/projects/bluecrest-10.webp'
+import bluecrest11 from '../assets/projects/bluecrest-11.webp'
+import bluecrest12 from '../assets/projects/bluecrest-12.webp'
+import bluecrest13 from '../assets/projects/bluecrest-13.webp'
+import bluecrest14 from '../assets/projects/bluecrest-14.webp'
+import bluecrest15 from '../assets/projects/bluecrest-15.webp'
 import csir1 from '../assets/projects/csir-1.webp'
 import csir2 from '../assets/projects/csir-2.webp'
+import csir3 from '../assets/projects/csir-3.webp'
+import csir4 from '../assets/projects/csir-4.webp'
+import csir5 from '../assets/projects/csir-5.webp'
+import csir6 from '../assets/projects/csir-6.webp'
+import csir7 from '../assets/projects/csir-7.webp'
+import csir8 from '../assets/projects/csir-8.webp'
 import cri1 from '../assets/projects/cri-1.webp'
 import cri2 from '../assets/projects/cri-2.webp'
-import cit1 from '../assets/projects/citations-1.webp'
-import cit2 from '../assets/projects/citations-2.webp'
+import cri3 from '../assets/projects/cri-3.webp'
+import cri4 from '../assets/projects/cri-4.webp'
+import cri5 from '../assets/projects/cri-5.webp'
+import cri6 from '../assets/projects/cri-6.webp'
+import citations1 from '../assets/projects/citations-1.webp'
+import citations2 from '../assets/projects/citations-2.webp'
+import citations3 from '../assets/projects/citations-3.webp'
+import citations4 from '../assets/projects/citations-4.webp'
+import citations5 from '../assets/projects/citations-5.webp'
+import citations6 from '../assets/projects/citations-6.webp'
+import citations7 from '../assets/projects/citations-7.webp'
+import citations8 from '../assets/projects/citations-8.webp'
 import tanktrackIcon from '../assets/projects/tanktrack-icon.png'
 import spyIcon from '../assets/projects/spyyourmoney-icon.png'
 
@@ -68,7 +112,7 @@ export const projects: Project[] = [
     description:
       'An exhibition-selected reimagining of the Autumn Estates development, shown at the DCDA Long Beach International Design Invitation Exhibition.',
     tools: ['3D Modelling', 'Rendering', 'Presentation Design'],
-    images: [apex1, apex2, apex3],
+    images: [apex1, apex2, apex3, apex4, apex5, apex6, apex7, apex8, apex9, apex10, apex11, apex12, apex13, apex14, apex15, apex16, apex17, apex18, apex19],
     year: '2024',
     recognition:
       'Best of the Best exhibitor — DCDA Long Beach International Design Invitation Exhibition, California State University, Long Beach, USA, 2024.',
@@ -102,7 +146,7 @@ export const projects: Project[] = [
     description:
       'A complete 3D visualisation of the BlueCrest University College campus — featured on the university blog, intranet and YouTube, and in its most-watched Instagram Live.',
     tools: ['SketchUp Pro', 'Lumion 10', 'Lightroom', 'Filmora'],
-    images: [bluecrest1, bluecrest2, bluecrest3],
+    images: [bluecrest1, bluecrest2, bluecrest3, bluecrest4, bluecrest5, bluecrest6, bluecrest7, bluecrest8, bluecrest9, bluecrest10, bluecrest11, bluecrest12, bluecrest13, bluecrest14, bluecrest15],
     year: '2021',
     links: [
       {
@@ -255,45 +299,97 @@ export const projects: Project[] = [
     },
   },
   {
-    slug: 'institutional-design-publications',
-    title: 'Institutional Design & Publications',
-    category: 'Publications',
-    categories: ['Graphic Design', 'Publications'],
-    description:
-      'Selected design work for CSIR-INSTI — annual reports, brochures, banners, branding, the CSIR-Crops Research Institute Book of Abstracts and institutional citations.',
-    tools: ['Adobe Creative Suite', 'CorelDRAW', 'Print Layout', 'Branding'],
-    images: [csir1, csir2, cri1, cri2, cit1, cit2],
+    slug: 'csir-insti-3d',
+    title: 'Project CSIR-INSTI: Modelling & Animation',
+    category: '3D Visualisation',
+    categories: ['3D Visualisation', 'Motion Graphics'],
+    description: '3D modelling and animation of the CSIR — Institute for Scientific and Technological Information, produced from within the institute.',
+    tools: ['SketchUp', 'Lumion', 'Photoshop'],
+    images: [csir1, csir2, csir3, csir4, csir5, csir6, csir7, csir8],
     year: '2022 — Present',
     links: [
-      {
-        label: 'CSIR-INSTI 3D on Behance',
-        url: 'https://www.behance.net/gallery/198044169/Project-CSIR-INSTI-Modeling-and-animation',
-      },
-      {
-        label: 'CRI Book of Abstracts on Behance',
-        url: 'https://www.behance.net/gallery/208531245/CSIR-CRI-BOOK-OF-ABSTRACTS-2018-BOOK-DESIGN',
-      },
-      {
-        label: 'Citations on Behance',
-        url: 'https://www.behance.net/gallery/208532541/CITATION-DESIGN-FOR-CSIR-INSTITUTES',
-      },
-    ],
-    caseStudy: {
-      overview:
-        'Ongoing institutional design for the CSIR – Institute for Scientific and Technological Information (INSTI): the visual materials an institute publishes to report, promote and honour. The range runs from annual reports and brochures to banners, social media graphics, branding materials, the CSIR-Crops Research Institute Book of Abstracts and institutional citations.',
-      objective:
-        'To give a scientific institution a consistent, credible visual voice — publications that read as carefully as the research inside them, and event materials that carry the institute’s identity without noise.',
-      process: [
-        'Design annual reports, brochures, flyers and banners for institute programmes and events.',
-        'Lay out multi-author publications, including the CSIR-Crops Research Institute Book of Abstracts, holding long documents to a single typographic system.',
-        'Produce institutional citations and social media graphics to the same brand rules.',
-        'Handle video editing and multimedia production alongside the print work.',
+                {
+          label: 'View on Behance',
+          url: 'https://www.behance.net/gallery/198044169/Project-CSIR-INSTI-Modeling-and-animation',
+        },
       ],
-      outcome:
-        'A steady stream of institutional publications and event materials produced to one standard, across print and screen, since August 2022.',
-      note: 'Personal design contributions within the institute’s wider communications team — institutional materials are team productions.',
-    },
+    caseStudy: {
+        overview:
+          'A 3D modelling and animation study of the CSIR — Institute for Scientific and Technological Information (INSTI), the institute where I serve as Senior Graphic Designer / Technical Officer. The piece carries the institute’s buildings and grounds into three dimensions, rendered and set in motion.',
+        objective:
+          'To give the institute a dimensional portrait of itself — the same accuracy expected of my publications work, extended into space, light and motion.',
+        process: [
+          'Modelled the institute and its surroundings, keeping proportions faithful to the real site.',
+          'Lit and rendered the scenes, then animated camera moves that present the buildings the way a visitor would meet them.',
+          'Finished the renders and motion pieces to the same visual standard as the institute’s print identity.',
+        ],
+        outcome:
+          'A 3D visualisation and animation set for the institute, published on Behance and used alongside the institute’s design and multimedia work.',
+        note: 'Produced within my role at CSIR-INSTI.',
+      },
   },
+  {
+    slug: 'csir-cri-book-of-abstracts',
+    title: 'CSIR-CRI Book of Abstracts 2018',
+    category: 'Publications',
+    categories: ['Publications', 'Graphic Design'],
+    description: 'Book design for the CSIR-Crops Research Institute Book of Abstracts (2018) — a multi-author scientific programme held to one typographic system.',
+    tools: ['Adobe Photoshop', 'Print Layout', 'Typography'],
+    images: [cri1, cri2, cri3, cri4, cri5, cri6],
+    year: '2018',
+    links: [
+                {
+          label: 'View on Behance',
+          url: 'https://www.behance.net/gallery/208531245/CSIR-CRI-BOOK-OF-ABSTRACTS-2018-BOOK-DESIGN',
+        },
+      ],
+    caseStudy: {
+        overview:
+          'Layout and design for the CSIR-Crops Research Institute’s Book of Abstracts — the printed publication that collects the research abstracts for the institute’s 2018 scientific event. Dozens of multi-author entries had to sit together as one coherent, readable document.',
+        objective:
+          'To hold dense scientific abstracts in a system that reads cleanly page after page — disciplined typography, clear structure, and a cover that represents the research inside.',
+        process: [
+          'Set a typographic system for abstracts, authors and affiliations that survives hundreds of entries.',
+          'Designed the cover and section openers to give the science a dignified, institutional face.',
+          'Carried the layout through print production to the finished book.',
+        ],
+        outcome:
+          'The 2018 Book of Abstracts, designed and produced as part of the institute’s publications programme — also featured on Behance.',
+        note: 'Personal design contribution within the institute’s publications work.',
+      },
+  },
+  {
+    slug: 'csir-institute-citations',
+    title: 'Citation Design for CSIR Institutes',
+    category: 'Graphic Design',
+    categories: ['Graphic Design', 'Publications'],
+    description:
+      'Institutional citations designed for CSIR institutes — formal honours that carry the institutes’ identity with restraint.',
+    tools: ['Adobe Illustrator', 'Print Design'],
+    images: [citations1, citations2, citations3, citations4, citations5, citations6, citations7, citations8],
+    year: '2022 — Present',
+    links: [
+                {
+          label: 'View on Behance',
+          url: 'https://www.behance.net/gallery/208532541/CITATION-DESIGN-FOR-CSIR-INSTITUTES',
+        },
+      ],
+    caseStudy: {
+        overview:
+          'A set of institutional citations designed for CSIR institutes — the formal honours presented to staff and partners. Each piece has to feel ceremonial without excess: the institutes’ identity, the recipient’s name, and nothing that competes with the moment.',
+        objective:
+          'To design citations worthy of the occasion — formal, warm and unmistakably institutional, in print quality.',
+        process: [
+          'Built each citation around the institutes’ identity, with ornament restrained to what the occasion earns.',
+          'Set names and citations in typography that honours the recipient.',
+          'Prepared the pieces for print and presentation.',
+        ],
+        outcome:
+          'A continuing series of institutional citation designs for the CSIR institutes, published on Behance.',
+        note: 'Personal design contribution within the institute’s work.',
+      },
+  },
+
 ]
 
 export const getProject = (slug: string | undefined) =>

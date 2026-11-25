@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
+import AmbientBackdrop from './components/AmbientBackdrop'
 import HomePage from './pages/HomePage'
 import ProjectPage from './pages/ProjectPage'
 import BlogIndexPage from './pages/BlogIndexPage'
@@ -17,19 +18,22 @@ function ScrollToTop() {
 
 export default function App() {
   return (
-    <div className="flex min-h-screen flex-col">
-      <ScrollToTop />
-      <Nav />
-      <main className="flex-1">
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/project/:slug" element={<ProjectPage />} />
-          <Route path="/blog" element={<BlogIndexPage />} />
-          <Route path="/blog/:slug" element={<BlogPostPage />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </main>
-      <Footer />
+    <div className="relative flex min-h-screen flex-col">
+      <AmbientBackdrop />
+      <div className="relative z-10 flex flex-1 flex-col">
+        <ScrollToTop />
+        <Nav />
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/project/:slug" element={<ProjectPage />} />
+            <Route path="/blog" element={<BlogIndexPage />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </div>
   )
 }

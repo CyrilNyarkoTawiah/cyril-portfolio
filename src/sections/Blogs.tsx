@@ -14,7 +14,7 @@ function formatDate(iso: string) {
 
 export default function Blogs() {
   return (
-    <section id="blogs" className="scroll-mt-24 bg-white py-16 md:py-24">
+    <section id="blogs" className="scroll-mt-24 bg-surface2/60 py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <SectionHeading eyebrow="Blogs" title="Insights & process notes" />
         <div className="mt-10 flex flex-col gap-5">
@@ -22,7 +22,7 @@ export default function Blogs() {
             <Reveal key={post.slug} delay={i * 0.06}>
               <Link
                 to={`/blog/${post.slug}`}
-                className="group flex flex-col gap-5 overflow-hidden rounded-2xl border border-navy/8 bg-paper p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand/30 hover:shadow-[0_16px_36px_-20px_rgba(23,32,51,0.25)] sm:flex-row sm:items-center"
+                className="group flex flex-col gap-5 overflow-hidden rounded-2xl border border-white/8 bg-surface p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-brand/30 hover:shadow-[0_16px_36px_-20px_rgba(23,32,51,0.25)] sm:flex-row sm:items-center"
               >
                 {post.image && (
                   <div className="overflow-hidden rounded-xl sm:w-56 md:w-64">
@@ -38,7 +38,7 @@ export default function Blogs() {
                   <span className="text-xs font-semibold uppercase tracking-wider text-brand">
                     {post.category}
                   </span>
-                  <h3 className="font-display text-xl font-bold text-navy md:text-2xl">
+                  <h3 className="font-display text-xl font-bold text-ink md:text-2xl">
                     {post.title}
                   </h3>
                   <p className="line-clamp-2 text-sm leading-relaxed text-steel">

@@ -11,7 +11,7 @@ export default function BlogPostPage() {
   if (!post) {
     return (
       <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 px-5 pb-24 pt-40 text-center">
-        <h1 className="font-display text-3xl font-bold text-navy">Article not found</h1>
+        <h1 className="font-display text-3xl font-bold text-ink">Article not found</h1>
         <Link to="/blog" className="inline-flex items-center gap-2 font-semibold text-brand">
           <ArrowLeft size={17} /> All articles
         </Link>
@@ -32,7 +32,7 @@ export default function BlogPostPage() {
         <span className="mt-6 block text-xs font-semibold uppercase tracking-wider text-brand">
           {post.category}
         </span>
-        <h1 className="font-display mt-3 text-3xl font-extrabold leading-tight tracking-tight text-navy md:text-4xl">
+        <h1 className="font-display mt-3 text-3xl font-extrabold leading-tight tracking-tight text-ink md:text-4xl">
           {post.title}
         </h1>
         <p className="mt-4 flex items-center gap-4 text-sm text-steel">
@@ -49,16 +49,16 @@ export default function BlogPostPage() {
             <img
               src={post.image}
               alt=""
-              className="aspect-[16/9] w-full rounded-2xl border border-navy/8 object-cover"
+              className="aspect-[16/9] w-full rounded-2xl border border-white/8 object-cover"
             />
           </Reveal>
         )}
 
-        <div className="mt-8 flex flex-col gap-5 text-[16.5px] leading-[1.75] text-navy/85">
+        <div className="mt-8 flex flex-col gap-5 text-[16.5px] leading-[1.75] text-ink/85">
           {post.body.map((block, i) => {
             if (block.type === 'h2') {
               return (
-                <h2 key={i} className="font-display mt-4 text-2xl font-bold text-navy">
+                <h2 key={i} className="font-display mt-4 text-2xl font-bold text-ink">
                   {block.text}
                 </h2>
               )
@@ -67,7 +67,7 @@ export default function BlogPostPage() {
               return (
                 <blockquote
                   key={i}
-                  className="my-2 border-l-[3px] border-brand pl-5 font-display text-xl font-semibold text-navy"
+                  className="my-2 border-l-[3px] border-brand pl-5 font-display text-xl font-semibold text-ink"
                 >
                   {block.text}
                 </blockquote>
