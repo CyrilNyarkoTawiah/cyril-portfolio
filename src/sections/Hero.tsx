@@ -2,7 +2,7 @@ import { motion, useReducedMotion } from 'framer-motion'
 import { ArrowRight, Github, Linkedin, MapPin } from 'lucide-react'
 import { site } from '../data/site'
 import { BehanceLink } from '../components/Footer'
-import portrait from '../assets/portrait.jpg'
+import portrait from '../assets/portrait.png'
 import { navigateToSection } from '../lib/scroll'
 
 const ease = [0.22, 0.61, 0.36, 1] as const
@@ -104,21 +104,21 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.2, ease }}
           className="relative mx-auto w-full max-w-[460px]"
         >
-          {/* Pale green accent shape behind the photo */}
+          {/* Green blob + pale accent behind the cutout portrait */}
           <div
             aria-hidden="true"
-            className="absolute -right-4 -top-4 h-[112%] w-[88%] rotate-6 rounded-[32px] bg-brand/85"
+            className="absolute -right-6 -top-2 h-[96%] w-[86%] rotate-6 rounded-[32px] bg-brand/85"
           />
           <div
             aria-hidden="true"
-            className="absolute -bottom-5 -left-5 h-[70%] w-[45%] rotate-[-8deg] rounded-[28px] bg-pale"
+            className="absolute -bottom-5 -left-5 h-[64%] w-[45%] rotate-[-8deg] rounded-[28px] bg-pale"
           />
           <img
             src={portrait}
             alt="Portrait of Cyril Nyarko Tawiah"
             width={460}
-            height={560}
-            className="relative z-10 aspect-[4/5] w-full rounded-[28px] object-cover shadow-[0_24px_60px_-24px_rgba(23,32,51,0.35)]"
+            height={480}
+            className="relative z-10 aspect-square w-full translate-x-[5%] object-contain object-bottom drop-shadow-[0_24px_28px_rgba(23,32,51,0.35)] [mask-image:linear-gradient(to_bottom,black_85%,transparent_97%)] [-webkit-mask-image:linear-gradient(to_bottom,black_85%,transparent_97%)]"
           />
         </motion.div>
       </div>
