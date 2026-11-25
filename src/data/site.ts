@@ -12,7 +12,6 @@ export const site = {
     github: 'https://github.com/CyrilNyarkoTawiah',
     linkedin: 'https://linkedin.com/in/cyril-nyarko-tawiah-229060151',
   },
-  cvUrl: `${import.meta.env.BASE_URL}Cyril_Tawiah_CV_v5.pdf`,
 } as const
 
 export const navLinks = [

@@ -1,8 +1,6 @@
-import { Download } from 'lucide-react'
 import Reveal from '../components/Reveal'
 import SectionHeading from '../components/SectionHeading'
 import { aboutIntro, education, roles } from '../data/experience'
-import { site } from '../data/site'
 
 export default function About() {
   return (
@@ -20,16 +18,7 @@ export default function About() {
               everyday Ghanaian problems: a video player for the parked car, a fuel tracker, a
               running companion that works offline.
             </p>
-            <a
-              href={site.cvUrl}
-              download="Cyril_Tawiah_CV_v5.pdf"
-              className="group mt-2 inline-flex w-fit items-center gap-2 rounded-full border border-navy/15 bg-white px-6 py-3 font-semibold text-ink transition-colors hover:border-brand hover:text-brand"
-            >
-              <Download size={17} className="text-brand" />
-              Download CV
-            </a>
-
-            <div className="mt-6">
+            <div className="mt-2">
               <h3 className="font-display text-base font-bold uppercase tracking-wider text-steel">
                 Education
               </h3>

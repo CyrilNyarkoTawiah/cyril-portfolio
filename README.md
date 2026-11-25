@@ -22,7 +22,7 @@ All content lives in `src/data/`:
 | `skills.ts` | Skill groups |
 
 The hero photo is `src/assets/portrait.jpg`, replace that file to change it.
-The CV linked on the site is `public/Cyril_Tawiah_CV_v5.pdf`.
+The CV is intentionally not published on the site.
 
 ## Dev
 
