@@ -76,6 +76,9 @@ import spyyourmoney3 from '../assets/projects/spyyourmoney-3.jpg'
 import spyyourmoney4 from '../assets/projects/spyyourmoney-4.jpg'
 import spyyourmoney5 from '../assets/projects/spyyourmoney-5.jpg'
 import spyyourmoney6 from '../assets/projects/spyyourmoney-6.jpg'
+import aashot1 from '../assets/projects/aashot-1.jpg'
+import aashot2 from '../assets/projects/aashot-2.jpg'
+import aashot4 from '../assets/projects/aashot-4.jpg'
 
 export type ProjectCategory =
   | 'Graphic Design'
@@ -378,6 +381,40 @@ export const projects: Project[] = [
         { name: 'Customisation', detail: 'Six themes with light and dark modes, privacy mode and an animated startup screen.' },
       ],
       note: 'Personal project, design, development and release.',
+    },
+  },
+  {
+    slug: 'aashot',
+    title: 'AAShot',
+    category: 'Android Applications',
+    categories: ['Android Applications'],
+    description:
+      'A Shizuku-powered Android Auto screen-capture tool, built for one reason: clean, true-to-screen captures of a wired AA session when the phone cannot screenshot it and a camera pointed at the head unit will not do.',
+    tools: ['Kotlin', 'Shizuku', 'Android Auto'],
+    images: [aashot1, aashot2, aashot4],
+    year: '2026',
+    caseStudy: {
+      overview:
+        'AAShot exists because of a portfolio problem. I needed clean screenshots of my Android Auto apps for the very page you are reading, and Android Auto would not cooperate: the phone cannot screenshot the AA rendering on the car display, and photographing the head unit with a camera produces glare and crooked frames. Rather than settle for bad images of good work, I built the tool that takes them properly.',
+      objective:
+        'To produce clean, true-to-screen captures of a wired Android Auto session straight from the phone: no camera, no cropped photos, no compromised quality, packaged as a one-tap tool that works in the car.',
+      process: [
+        'Probed Android\u2019s display-capture paths and found the one that reaches virtual displays: screencap with stable display ids, which sees what normal screenshots cannot.',
+        'Integrated Shizuku for privileged shell access from a plain phone app, handling the binder lifecycle and streaming binary PNG output without corrupting it.',
+        'Taught the tool to recognise the AA session: capture every virtual display, pick the largest landscape one as the main car screen, then stitch the car\u2019s separate bottom-bar display beneath it, width-normalised, into a single composite.',
+        'Added a Quick Settings tile so a capture is one tap from anywhere, and validated the whole flow in the car on a real wired AA connection.',
+      ],
+      outcome:
+        'A working screen-capture tool, proven in the car: the images throughout this site\u2019s Android Auto projects are its output. Captures land as PNG files in Pictures/AndroidAuto, ready to publish.',
+      features: [
+        { name: 'Virtual-display capture', detail: 'Screencaps every virtual display over Shizuku and selects the largest landscape one as the AA main content.' },
+        { name: 'Composite output', detail: 'Stitches the car\u2019s bottom-bar strip beneath the main area, width-normalised on a black background, into one PNG.' },
+        { name: 'One-tap capture', detail: 'A Quick Settings tile plus an in-app capture button, so a shot is one tap from the driver\u2019s seat.' },
+        { name: 'Gallery-ready saving', detail: 'PNG files land in Pictures/AndroidAuto, immediately viewable and shareable.' },
+        { name: 'No AA registration', detail: 'A plain phone app with no Android Auto media declaration and no server gate, which is exactly why it could exist.' },
+        { name: 'Proven in the car', detail: 'Captures maps, the AA launcher (RoadPlay and TankTrack visible), media playback and messages from a real wired session.' },
+      ],
+      note: 'Personal project, built to make the Android Auto work on this site photographable. Design, development and release.',
     },
   },
   {
