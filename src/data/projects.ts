@@ -79,6 +79,9 @@ import spyyourmoney6 from '../assets/projects/spyyourmoney-6.jpg'
 import aashot1 from '../assets/projects/aashot-1.jpg'
 import aashot2 from '../assets/projects/aashot-2.jpg'
 import aashot4 from '../assets/projects/aashot-4.jpg'
+import tanktrackCard from '../assets/projects/tanktrack-card.jpg'
+import pacetrailCard from '../assets/projects/pacetrail-card.jpg'
+import spyyourmoneyCard from '../assets/projects/spyyourmoney-card.jpg'
 
 export type ProjectCategory =
   | 'Graphic Design'
@@ -114,6 +117,8 @@ export interface Project {
   coverIcon?: 'car' | 'route'
   /** Explicit card cover (defaults to images[0]); lets galleries stay in numeric order. */
   cover?: string
+  /** 'cover' = full-bleed mockup cover even when the gallery is portrait screenshots. */
+  cardFit?: 'cover'
   /** Gallery cell treatment: 'wide' (landscape covers) or 'phone' (portrait screenshots). */
   gallery?: 'wide' | 'phone'
   year: string
@@ -259,6 +264,8 @@ export const projects: Project[] = [
       'An offline-first fuel-tracking Android app for Ghanaian drivers: automatic trip recording, live trip monitoring, fuel analytics and Android Auto integration.',
     tools: ['Kotlin', 'Jetpack Compose', 'MapLibre', 'Android Auto'],
     images: [tanktrack1, tanktrack2, tanktrack3, tanktrack4, tanktrack5, tanktrack6],
+    cover: tanktrackCard,
+    cardFit: 'cover',
     gallery: 'phone',
     year: '2026',
     links: [
@@ -304,6 +311,8 @@ export const projects: Project[] = [
       'A native Android running companion built for my brother: GPS tracking, run replay, splits, achievements and MapLibre mapping, offline-first with no account required.',
     tools: ['Kotlin', 'Jetpack Compose', 'MapLibre', 'Room'],
     images: [pacetrail1, pacetrail2, pacetrail3, pacetrail4, pacetrail5, pacetrail6, pacetrail7],
+    cover: pacetrailCard,
+    cardFit: 'cover',
     gallery: 'phone',
     year: '2026',
     links: [
@@ -348,6 +357,8 @@ export const projects: Project[] = [
       'An offline-first personal finance Android app: accounts, budgets, bills and subscriptions, debts, savings goals and spending insights, with no internet permission.',
     tools: ['Kotlin', 'Jetpack Compose'],
     images: [spyyourmoney1, spyyourmoney2, spyyourmoney3, spyyourmoney4, spyyourmoney5, spyyourmoney6],
+    cover: spyyourmoneyCard,
+    cardFit: 'cover',
     gallery: 'phone',
     year: '2026',
     links: [

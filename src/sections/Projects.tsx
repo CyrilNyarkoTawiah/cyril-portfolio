@@ -50,9 +50,11 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               alt={project.title}
               loading="lazy"
               className={
-                project.gallery === 'phone' || project.category === 'Android Applications'
-                  ? 'aspect-[16/10] w-full bg-navy/5 object-contain p-3'
-                  : 'aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]'
+                project.cardFit === 'cover'
+                  ? 'aspect-[16/10] w-full object-cover'
+                  : project.gallery === 'phone' || project.category === 'Android Applications'
+                    ? 'aspect-[16/10] w-full bg-navy/5 object-contain p-3'
+                    : 'aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]'
               }
             />
           ) : (
