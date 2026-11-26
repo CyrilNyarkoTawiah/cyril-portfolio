@@ -100,13 +100,17 @@ export default function ProjectPage() {
       {/* Visual */}
       <div className="mx-auto mt-10 max-w-7xl px-5 md:px-8">
         {project.images ? (
-          <div className={`grid gap-5 ${project.images.length > 1 ? 'md:grid-cols-3' : ''}`}>
+          <div className={`grid gap-5 ${project.images.length > 1 ? (project.gallery === 'phone' ? 'grid-cols-2 md:grid-cols-4' : 'md:grid-cols-3') : ''}`}>
             {project.images.map((img, i) => (
-              <Reveal key={img + i} delay={i * 0.06}>
+              <Reveal key={img + i} delay={(i % 4) * 0.06}>
                 <img
                   src={img}
                   alt={`${project.title}, visual ${i + 1}`}
-                  className="aspect-[16/10] w-full rounded-2xl border border-navy/8 object-cover"
+                  className={
+                    project.gallery === 'phone'
+                      ? 'aspect-[9/19] w-full rounded-2xl border border-navy/8 bg-navy/5 object-contain'
+                      : 'aspect-[16/10] w-full rounded-2xl border border-navy/8 object-cover'
+                  }
                 />
               </Reveal>
             ))}
@@ -162,6 +166,21 @@ export default function ProjectPage() {
               </ol>
             </section>
           </Reveal>
+          {cs.features && cs.features.length > 0 && (
+            <Reveal>
+              <section>
+                <h2 className="font-display text-2xl font-bold text-ink">Key features</h2>
+                <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                  {cs.features.map((f) => (
+                    <div key={f.name} className="rounded-2xl border border-navy/8 bg-surface p-4">
+                      <p className="font-display font-bold text-ink">{f.name}</p>
+                      <p className="mt-1 text-sm leading-relaxed text-steel">{f.detail}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            </Reveal>
+          )}
         </div>
 
         <aside className="flex flex-col gap-6">

@@ -54,8 +54,28 @@ import citations5 from '../assets/projects/citations-5.webp'
 import citations6 from '../assets/projects/citations-6.webp'
 import citations7 from '../assets/projects/citations-7.webp'
 import citations8 from '../assets/projects/citations-8.webp'
-import tanktrackIcon from '../assets/projects/tanktrack-icon.png'
-import spyIcon from '../assets/projects/spyyourmoney-icon.png'
+import pacetrail1 from '../assets/projects/pacetrail-1.jpg'
+import pacetrail2 from '../assets/projects/pacetrail-2.jpg'
+import pacetrail3 from '../assets/projects/pacetrail-3.jpg'
+import pacetrail4 from '../assets/projects/pacetrail-4.jpg'
+import pacetrail5 from '../assets/projects/pacetrail-5.jpg'
+import pacetrail6 from '../assets/projects/pacetrail-6.jpg'
+import pacetrail7 from '../assets/projects/pacetrail-7.jpg'
+import roadplay1 from '../assets/projects/roadplay-1.jpg'
+import roadplay2 from '../assets/projects/roadplay-2.jpg'
+import roadplay3 from '../assets/projects/roadplay-3.jpg'
+import tanktrack1 from '../assets/projects/tanktrack-1.jpg'
+import tanktrack2 from '../assets/projects/tanktrack-2.jpg'
+import tanktrack3 from '../assets/projects/tanktrack-3.jpg'
+import tanktrack4 from '../assets/projects/tanktrack-4.jpg'
+import tanktrack5 from '../assets/projects/tanktrack-5.jpg'
+import tanktrack6 from '../assets/projects/tanktrack-6.jpg'
+import spyyourmoney1 from '../assets/projects/spyyourmoney-1.jpg'
+import spyyourmoney2 from '../assets/projects/spyyourmoney-2.jpg'
+import spyyourmoney3 from '../assets/projects/spyyourmoney-3.jpg'
+import spyyourmoney4 from '../assets/projects/spyyourmoney-4.jpg'
+import spyyourmoney5 from '../assets/projects/spyyourmoney-5.jpg'
+import spyyourmoney6 from '../assets/projects/spyyourmoney-6.jpg'
 
 export type ProjectCategory =
   | 'Graphic Design'
@@ -70,6 +90,8 @@ export interface CaseStudy {
   objective: string
   process: string[]
   outcome: string
+  /** Headline features rendered as a grid. */
+  features?: Array<{ name: string; detail: string }>
   /** Extra note distinguishing personal vs team contribution. */
   note?: string
 }
@@ -87,6 +109,10 @@ export interface Project {
   icon?: string
   /** Lucide icon name for designed brand covers. */
   coverIcon?: 'car' | 'route'
+  /** Explicit card cover (defaults to images[0]); lets galleries stay in numeric order. */
+  cover?: string
+  /** Gallery cell treatment: 'wide' (landscape covers) or 'phone' (portrait screenshots). */
+  gallery?: 'wide' | 'phone'
   year: string
   recognition?: string
   links?: { label: string; url: string }[]
@@ -112,7 +138,8 @@ export const projects: Project[] = [
     description:
       'An exhibition-selected reimagining of the Autumn Estates development, shown at the DCDA Long Beach International Design Invitation Exhibition.',
     tools: ['3D Modelling', 'Rendering', 'Presentation Design'],
-    images: [apex12, apex1, apex2, apex3, apex4, apex5, apex6, apex7, apex8, apex9, apex10, apex11, apex13, apex14, apex15, apex16, apex17, apex18, apex19],
+    images: [apex1, apex2, apex3, apex4, apex5, apex6, apex7, apex8, apex9, apex10, apex11, apex12, apex13, apex14, apex15, apex16, apex17, apex18, apex19],
+    cover: apex12,
     year: '2024',
     recognition:
       'Best of the Best exhibitor, DCDA Long Beach International Design Invitation Exhibition, California State University, Long Beach, USA, 2024.',
@@ -150,7 +177,8 @@ export const projects: Project[] = [
     description:
       'A complete 3D visualisation of the BlueCrest University College campus, featured on the university blog, intranet and YouTube, and in its most-watched Instagram Live.',
     tools: ['SketchUp Pro', 'Lumion 10', 'Lightroom', 'Filmora'],
-    images: [bluecrest10, bluecrest1, bluecrest2, bluecrest3, bluecrest4, bluecrest5, bluecrest6, bluecrest7, bluecrest8, bluecrest9, bluecrest11, bluecrest12, bluecrest13, bluecrest14, bluecrest15],
+    images: [bluecrest1, bluecrest2, bluecrest3, bluecrest4, bluecrest5, bluecrest6, bluecrest7, bluecrest8, bluecrest9, bluecrest10, bluecrest11, bluecrest12, bluecrest13, bluecrest14, bluecrest15],
+    cover: bluecrest10,
     year: '2021',
     links: [
       {
@@ -184,28 +212,38 @@ export const projects: Project[] = [
     category: 'Android Applications',
     categories: ['Android Applications'],
     description:
-      'A shipped Android video player built for the car, plays video on the parked car screen and returns to the film automatically when the head unit wakes.',
-    tools: ['Kotlin', 'Jetpack Compose'],
-    coverIcon: 'car',
+      'A custom-built Android Auto video player developed from the ground up in Kotlin, bringing personal video libraries to the car screen with a companion mobile app.',
+    tools: ['Kotlin', 'Android Auto', 'Jetpack Compose'],
+    images: [roadplay1, roadplay2, roadplay3],
     year: '2026',
     links: [
       {
-        label: 'GitHub, v1.1.0 release',
+        label: 'GitHub releases',
         url: 'https://github.com/CyrilNyarkoTawiah/RoadPlay/releases',
       },
     ],
     caseStudy: {
       overview:
-        'RoadPlay is an Android video player designed around one specific moment: the parked car. It plays video on the car screen while the vehicle is parked, and when the head unit wakes, playback returns to the film automatically, no fumbling through menus at the wheel.',
+        'RoadPlay is a custom-built Android Auto video player developed from the ground up using Kotlin. The project started with a simple question: could I build my own app to access and play my personal video collection through my car\u2019s infotainment screen?',
       objective:
-        'To make in-car video effortless for drivers who spend long waits in the car: open, play, step away, come back to exactly where the story paused.',
+        'To develop a video player that makes personal video libraries accessible through Android Auto, overcoming the platform\u2019s conventional restrictions on video playback while providing a smooth, intuitive and customisable user experience. Beyond basic playback, the project aimed to deliver a complete media environment: video library browsing, playback controls, display options, playback-state management and a companion mobile app for configuration.',
       process: [
-        'Designed the playback experience around the parked-video car-screen mode, with the car’s display as the primary target.',
-        'Built the player in Kotlin with Jetpack Compose, handling the head-unit lifecycle so video resumes on wake.',
-        'Signed the release build and published version 1.1.0 through a CI-built GitHub release.',
+        'Started from a platform restriction: Android Auto does not natively permit video playback on the car display, so I explored an alternative Android Auto media-app implementation that made the project possible.',
+        'Grew the experiment into a fully featured in-car media experience across sixteen signed releases, from v1.0.0 to v2.3.0.',
+        'Designed it to work across different vehicle brands and models, so the experience is not tied to one particular vehicle.',
       ],
       outcome:
-        'Version 1.1.0 is shipped as a signed release on GitHub. A real-car test round is the next milestone for the player.',
+        'A refined, feature-rich Android Auto media experience, evolved from an unstable prototype into a polished application across sixteen signed releases.',
+      features: [
+        { name: 'Video library', detail: 'Browse personal videos on the car screen using grid or list views, complete with real video thumbnails.' },
+        { name: 'Continue watching', detail: 'A dedicated feature for quickly returning to previously watched content.' },
+        { name: 'Video playback', detail: 'Parked-mode playback with flexible aspect-ratio controls, similar to those found in VLC.' },
+        { name: 'Playback state management', detail: 'Preserves playback state across gear changes and transitions between browsing and playback.' },
+        { name: 'Smart playback controls', detail: 'Tap-to-reveal controls that automatically hide, alongside a mini-player that keeps the library accessible during playback.' },
+        { name: 'Built-in car browser', detail: 'An integrated browser with YouTube support, fullscreen video, an on-screen keyboard and phone-based keyboard input.' },
+        { name: 'Customisation', detail: 'Five selectable themes to personalise the interface.' },
+        { name: 'Phone companion app', detail: 'A dedicated mobile interface for managing application settings.' },
+      ],
       note: 'Personal project, design, development and release.',
     },
   },
@@ -215,9 +253,10 @@ export const projects: Project[] = [
     category: 'Android Applications',
     categories: ['Android Applications'],
     description:
-      'An Android trip and fuel tracker with live trip statistics, car-display support and six interface themes, built with Kotlin and Jetpack Compose.',
-    tools: ['Kotlin', 'Jetpack Compose'],
-    icon: tanktrackIcon,
+      'An offline-first fuel-tracking Android app for Ghanaian drivers: automatic trip recording, live trip monitoring, fuel analytics and Android Auto integration.',
+    tools: ['Kotlin', 'Jetpack Compose', 'MapLibre', 'Android Auto'],
+    images: [tanktrack1, tanktrack2, tanktrack3, tanktrack4, tanktrack5, tanktrack6],
+    gallery: 'phone',
     year: '2026',
     links: [
       {
@@ -227,16 +266,29 @@ export const projects: Project[] = [
     ],
     caseStudy: {
       overview:
-        'TankTrack records trips and fuel for everyday drivers: live trip statistics while you move, car-display support for the drives themselves, and a tracking history you can actually learn from.',
+        'TankTrack is a fuel-tracking Android application developed for Ghanaian drivers, designed to provide a clearer picture of vehicle fuel consumption, travel patterns and running costs. The idea behind the project was simple: give drivers a practical way to understand how much fuel their vehicles consume, how much they spend on fuel and how efficiently their vehicles perform over time.',
       objective:
-        'To turn scattered fuel receipts and odometer guesses into one clean, offline record of what the car really costs and how it is driven.',
+        'To build a reliable and privacy-focused fuel management application that helps Ghanaian motorists monitor their fuel consumption, track journeys and make informed decisions about vehicle running costs. The project also aimed to extend this experience beyond the phone by integrating TankTrack with Android Auto, allowing drivers to access relevant trip information directly from the vehicle\u2019s infotainment system.',
       process: [
-        'Shaped the data model around trips and refuels, keeping every entry quick to log from behind the wheel.',
-        'Built the interface in Kotlin with Jetpack Compose, including live trip statistics and support for car displays.',
-        'Shipped six interface themes so the app matches the driver, not the other way round.',
+        'Combined manual fuel logging with automatic trip recording to calculate real-world fuel consumption and driving expenses.',
+        'Built with an offline-first approach: no personal data uploaded to external servers, and fuel prices based on actual prices entered by users across Ghana\u2019s six fuel companies rather than estimated figures.',
+        'Evolved the app through continuous development and iterative testing from a basic fuel-logging tool into a comprehensive vehicle-monitoring system with live trip tracking, interactive maps, fuel analytics and Android Auto integration.',
       ],
       outcome:
-        'A working trip and fuel tracker with live statistics, car-display support and six themes, in active development with CI-built releases.',
+        'A feature-rich vehicle and fuel management application, combining live trip tracking, interactive maps, fuel analytics, data management and Android Auto integration.',
+      features: [
+        { name: 'Fuel logging', detail: 'Record fuel purchases, fill-ups, quantities, prices and expenses to build a detailed fuel history.' },
+        { name: 'Automatic trip recording', detail: 'Capture journeys automatically through a foreground service while driving.' },
+        { name: 'Fuel consumption analytics', detail: 'Calculate actual fuel consumption, estimated fuel usage and vehicle running costs using recorded data.' },
+        { name: 'Live trip monitoring', detail: 'Display distance travelled, speed, journey duration and estimated fuel consumption in real time.' },
+        { name: 'Interactive mapping', detail: 'Integrated MapLibre maps that follow the vehicle\u2019s movement and draw the route as the journey progresses.' },
+        { name: 'Trip history', detail: 'Review recorded journeys, manage trip records and benefit from additional safeguards against accidental deletion.' },
+        { name: 'Data export', detail: 'Export and preserve recorded information for personal records and future reference.' },
+        { name: 'Customisable interface', detail: 'A Material-themed interface with six selectable colour themes, supporting both light and dark modes.' },
+        { name: 'Offline-first privacy', detail: 'Keep fuel records and trip information stored locally on the device without uploading personal data to external servers.' },
+        { name: 'Android Auto integration', detail: 'A live driving information card on compatible car infotainment systems, showing distance, speed, elapsed time, estimated fuel consumption and an animated route sparkline.' },
+        { name: 'Extended car dashboard (in development)', detail: 'Work is ongoing to unlock a more comprehensive parked-mode dashboard on the car\u2019s display, featuring analytics cards, route visualisation and additional fuel insights.' },
+      ],
       note: 'Personal project, design, development and release.',
     },
   },
@@ -246,9 +298,10 @@ export const projects: Project[] = [
     category: 'Android Applications',
     categories: ['Android Applications'],
     description:
-      'An offline-first running and pace tracker, live GPS tracking, route drawing, splits, achievements and CSV/GPX export, backed by 40 passing unit tests.',
-    tools: ['Kotlin', 'Jetpack Compose', 'Room'],
-    coverIcon: 'route',
+      'A native Android running companion built for my brother: GPS tracking, run replay, splits, achievements and MapLibre mapping, offline-first with no account required.',
+    tools: ['Kotlin', 'Jetpack Compose', 'MapLibre', 'Room'],
+    images: [pacetrail1, pacetrail2, pacetrail3, pacetrail4, pacetrail5, pacetrail6, pacetrail7],
+    gallery: 'phone',
     year: '2026',
     links: [
       {
@@ -258,17 +311,29 @@ export const projects: Project[] = [
     ],
     caseStudy: {
       overview:
-        'PaceTrail is an offline-first running companion: it tracks pace live over GPS, draws the route as you run, logs splits, and stores everything locally so it works far from any signal.',
+        'PaceTrail is a native Android running application I developed for my brother, Lexie, with the tagline \u201cFind your pace. Own your path.\u201d Built with Kotlin and Jetpack Compose, it serves as a personal running companion: GPS-based run tracking, fitness insights and progress monitoring, working offline with no user account or backend, all personal running data stored on the device.',
       objective:
-        'To give runners a tracker they can trust anywhere in Accra and beyond, no signal required, no data held hostage, with exports that outlive the app.',
+        'To create a personalised, offline-first running companion that records real GPS runs reliably (even with the screen off), keeps running history private and stored locally, turns every run into a meaningful experience through visual summaries, achievements and performance analysis, gives training suggestions based on actual history rather than fabricated statistics, and can be built, maintained and updated through GitHub without a traditional Android Studio workflow.',
       process: [
-        'Built the tracking core on live GPS with route drawing and running splits, storing runs in a Room database.',
-        'Added achievements and CSV/GPX export so the data stays the runner’s own.',
-        'Held the logic to a test-first standard, 40 passing unit tests guard the tracking and export paths.',
+        'Foundation: established the project structure, implemented the six themes, configured the local database and created the automated GitHub Actions build workflow.',
+        'Core running features: developed the GPS recording engine with pause and resume, saved runs, running history and a post-run completion screen.',
+        'Personalisation: added a fitness profile with BMI calculations, photo support, training suggestions, personal goals, backup and restore, data export, a welcome tour, help centre and running calendar.',
+        'First real builds: relied on GitHub Actions to build and test, worked through build logs to fix missing imports across ten files, a typo and an SDK configuration error.',
+        'Complete UI redesign: redesigned the entire experience around four visual references, with gradient themes, bundled fonts, an illustrated hero scene, floating navigation, spring-based button interactions, animated rings and charts, confetti effects, a starting countdown and shareable running images.',
+        'Update 2, ten major improvements: two-step run deletion, run replay, fixed centred navigation bar, swipe and tap controls, more achievement badges, a scoreboard, pre-run, during-run and post-run notes, individual run analysis, a swipeable calendar, and location and route sharing.',
+        'Update 3, mapping: integrated OpenStreetMap through MapLibre after exploring Google Maps (whose API key required account and billing setup), structured so Google Maps can be enabled later with a valid key.',
       ],
       outcome:
-        'An offline-first tracker with live GPS, route drawing, splits, achievements, CSV and GPX export, and a unit-test suite of 40 passing tests.',
-      note: 'Personal project, design, development and release.',
+        'A complete running companion delivered through several development stages, redesigns and three major updates, packaged as PaceTrail.zip (the full source project) and PaceTrail-update-3.zip (a lightweight update package with the six modified files). One of my most hands-on experiences in Android development: GPS technologies, mapping, UI/UX design, automated builds and deployment, turning a personal idea into something functional and practical.',
+      features: [
+        { name: 'GPS running and recording', detail: 'Foreground-service GPS engine that records even with the screen off, GPS filtering, pause and resume with separate active and paused time, optional distance goals, pre-run countdown, voice updates and swipe-or-tap controls.' },
+        { name: 'Post-run experience', detail: 'A completion screen with summaries and celebration effects, photo support, notes before, during and after a run, animated route replay, and shareable running summary, route and location sharing.' },
+        { name: 'Performance analysis', detail: 'Kilometre-by-kilometre splits, best running efforts, time spent at different paces, longest continuous steady-running stretch, and individual run statistics.' },
+        { name: 'Progress and motivation', detail: 'A points-based scoreboard with progressive levels, 24 achievement badges including half-marathon, marathon and ultra-marathon milestones, personal bests, weekly goals and progress charts.' },
+        { name: 'Additional features', detail: 'Interactive calendar with swipeable monthly navigation, six colour themes in light and dark modes, backup and restore, CSV and GPX export, an integrated help centre, and OpenStreetMap street mapping through MapLibre.' },
+        { name: 'Project deliverables', detail: 'PaceTrail.zip, the complete application source project, and PaceTrail-update-3.zip, a lightweight update package containing only the six files modified in the latest update.' },
+      ],
+      note: 'Personal project, built for my brother, design, development and release.',
     },
   },
   {
@@ -277,9 +342,10 @@ export const projects: Project[] = [
     category: 'Android Applications',
     categories: ['Android Applications'],
     description:
-      'An offline-first personal finance app, accounts, budgets, bills and subscriptions, debts and savings goals, encrypted backup and rule-based spending insights.',
+      'An offline-first personal finance Android app: accounts, budgets, bills and subscriptions, debts, savings goals and spending insights, with no internet permission.',
     tools: ['Kotlin', 'Jetpack Compose'],
-    icon: spyIcon,
+    images: [spyyourmoney1, spyyourmoney2, spyyourmoney3, spyyourmoney4, spyyourmoney5, spyyourmoney6],
+    gallery: 'phone',
     year: '2026',
     links: [
       {
@@ -289,16 +355,28 @@ export const projects: Project[] = [
     ],
     caseStudy: {
       overview:
-        'SpyYourMoney watches money the way a detective would: every account, budget, bill, subscription, debt and savings goal in one offline-first place, with encrypted backup and CSV export.',
+        'SpyYourMoney is a personal finance Android application I developed to help me track my income, expenses, savings, debts and overall spending habits. It supports cash, Mobile Money and bank accounts, allowing me to manage all my finances from one place. I built it with an offline-first, privacy-focused approach: all records are entered manually and stored locally on my phone, with no internet permission, bank connections, backend server, user accounts or advertisements.',
       objective:
-        'To make personal finances legible without an internet connection or an account somewhere else, your money story lives on your phone, encrypted.',
+        'To build a personal finance tool that tracks income, expenses and transfers across multiple accounts; manages budgets, bills, subscriptions and expected income; monitors debts, repayments and savings goals; understands spending patterns through reports and financial insights; plans upcoming expenses with the Can I Afford This? feature; and keeps financial information private with local storage and secure backup options.',
       process: [
         'Modelled the full personal-finance picture: accounts, budgets, bills and subscriptions, debts and savings goals.',
-        'Added rule-based spending insights that read patterns in the ledger and say what is actually happening.',
-        'Protected the ledger with encrypted backup and kept export as CSV so the data always leaves on the owner’s terms.',
+        'Added rule-based spending insights that read patterns in the ledger and say what is actually happening, including the Money Leak Radar.',
+        'Protected the ledger with biometric app lock and password-protected backups, and kept export as CSV so the data always leaves on the owner\u2019s terms.',
       ],
       outcome:
-        'A complete offline-first finance app with accounts, budgets, bills and subscriptions, debts and savings goals, encrypted backup, CSV export and rule-based insights.',
+        'A fully featured personal finance system built for better visibility and control over my money, without relying on external financial services or sacrificing privacy.',
+      features: [
+        { name: 'Account management', detail: 'Cash, MoMo, bank, savings and other accounts.' },
+        { name: 'Transaction tracking', detail: 'Record, edit, search and categorise income and expenses.' },
+        { name: 'Budgeting', detail: 'Weekly, monthly and custom budgets with spending alerts and forecasts.' },
+        { name: 'Bills and income', detail: 'Manage recurring payments, subscriptions and expected earnings.' },
+        { name: 'Debt management', detail: 'Track borrowed and lent money, repayments and outstanding balances.' },
+        { name: 'Savings goals', detail: 'Set targets, monitor contributions and calculate required monthly savings.' },
+        { name: 'Financial calendar', detail: 'View transactions, bills, debts, goals and scheduled tasks.' },
+        { name: 'Reports and insights', detail: 'Spending breakdowns, financial trends and Money Leak Radar.' },
+        { name: 'Security and backup', detail: 'Biometric app lock, password-protected backups, restore and CSV export.' },
+        { name: 'Customisation', detail: 'Six themes with light and dark modes, privacy mode and an animated startup screen.' },
+      ],
       note: 'Personal project, design, development and release.',
     },
   },
@@ -370,7 +448,8 @@ export const projects: Project[] = [
     description:
       'Institutional citations designed for CSIR institutes, formal honours that carry the institutes’ identity with restraint.',
     tools: ['Adobe Illustrator', 'Print Design'],
-    images: [citations3, citations1, citations2, citations4, citations5, citations6, citations7, citations8],
+    images: [citations1, citations2, citations3, citations4, citations5, citations6, citations7, citations8],
+    cover: citations3,
     year: '2022–Present',
     links: [
                 {

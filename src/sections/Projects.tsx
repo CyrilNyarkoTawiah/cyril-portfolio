@@ -44,12 +44,16 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         className="group flex h-full flex-col overflow-hidden rounded-2xl border border-navy/8 bg-surface shadow-[0_2px_12px_-6px_rgba(23,32,51,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_-20px_rgba(23,32,51,0.25)]"
       >
         <div className="overflow-hidden">
-          {project.images?.[0] ? (
+          {(project.cover ?? project.images?.[0]) ? (
             <img
-              src={project.images[0]}
+              src={project.cover ?? project.images?.[0]}
               alt={project.title}
               loading="lazy"
-              className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+              className={
+                project.gallery === 'phone' || project.category === 'Android Applications'
+                  ? 'aspect-[16/10] w-full bg-navy/5 object-contain p-3'
+                  : 'aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]'
+              }
             />
           ) : (
             <ProjectCover project={project} />
@@ -64,7 +68,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               <ArrowUpRight size={16} />
             </span>
           </div>
-          <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-steel">
+          <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-steel [align-self:stretch] flex-1">
             {project.description}
           </p>
           <div className="mt-4 flex flex-wrap gap-1.5 pt-1">
