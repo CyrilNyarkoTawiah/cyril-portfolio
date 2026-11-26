@@ -14,9 +14,9 @@ export interface Post {
   reviewed?: boolean
 }
 
+import bluecrest10 from '../assets/projects/bluecrest-10.webp'
 import bluecrest14 from '../assets/projects/bluecrest-14.webp'
 import aiCover from '../assets/ai-taste-cover.png'
-import fromConcept3dCover from '../assets/from-concept-3d-cover.png'
 import edgeAiCover from '../assets/edge-ai-cover.png'
 import twinCover from '../assets/digital-twin-cover.png'
 import spatialCover from '../assets/spatial-cover.png'
@@ -63,7 +63,7 @@ export const posts: Post[] = [
     category: '3D Visualisation',
     date: '2026-11-25',
     readingTime: '2 min read',
-    image: fromConcept3dCover,
+    image: bluecrest10,
     reviewed: true,
     reference: {
       label: 'Read the original feature on the BlueCrest blog',
