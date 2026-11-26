@@ -12,8 +12,6 @@ export interface Post {
   body: Array<{ type: 'p' | 'h2' | 'quote' | 'img'; text?: string; src?: string }>
   /** Set once the author has reviewed the draft. */
   reviewed?: boolean
-  /** Card design used on the home blogs section and blog index; each post carries its own. */
-  card?: 'split' | 'editorial' | 'poster' | 'stacked' | 'framed'
 }
 
 import bluecrest10 from '../assets/projects/bluecrest-10.webp'
@@ -34,7 +32,6 @@ export const posts: Post[] = [
     readingTime: '3 min read',
     image: aiCover,
     reviewed: true,
-    card: 'split',
     body: [
       {
         type: 'p',
@@ -68,7 +65,6 @@ export const posts: Post[] = [
     readingTime: '2 min read',
     image: bluecrest10,
     reviewed: true,
-    card: 'editorial',
     reference: {
       label: 'Read the original feature on the BlueCrest blog',
       url: 'https://blog.bluecrest.edu.gh/2021/05/25/bluecrest-college-student-creates-3d-visuals-of-the-campus/',
@@ -106,7 +102,6 @@ export const posts: Post[] = [
     readingTime: '3 min read',
     image: edgeAiCover,
     reviewed: true,
-    card: 'poster',
     body: [
       {
         type: 'p',
@@ -144,7 +139,6 @@ export const posts: Post[] = [
     readingTime: '3 min read',
     image: twinCover,
     reviewed: true,
-    card: 'stacked',
     body: [
       {
         type: 'p',
@@ -182,7 +176,6 @@ export const posts: Post[] = [
     readingTime: '3 min read',
     image: spatialCover,
     reviewed: true,
-    card: 'framed',
     body: [
       {
         type: 'p',
