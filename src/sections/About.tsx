@@ -12,11 +12,10 @@ export default function About() {
           <Reveal className="flex flex-col gap-5">
             <p className="text-lg leading-relaxed text-ink/90">{aboutIntro}</p>
             <p className="leading-relaxed text-steel">
-              At CSIR-INSTI I give a scientific institution its visual voice, annual reports,
-              publications, exhibitions and digitisation projects, while pursuing an MPhil in
-              Information Systems at UPSA. Away from the desk I build Android apps that solve
-              everyday Ghanaian problems: a video player for the parked car, a fuel tracker, a
-              running companion that works offline.
+              I live a dual practice: giving institutions and brands their visual voice through
+              annual reports, publications and exhibitions, while building the software I wish
+              existed, from first concept to shipped release. The thread running through it all is
+              the same: solve the problem properly, then make it beautiful.
             </p>
             <div className="mt-2">
               <h3 className="font-display text-base font-bold uppercase tracking-wider text-steel">
