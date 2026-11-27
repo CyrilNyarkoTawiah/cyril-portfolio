@@ -165,9 +165,9 @@ export const projects: Project[] = [
     ],
     caseStudy: {
       overview:
-        'Apex Legends: Autumn Estates Reimagined is a design-exhibition entry that reimagines the Autumn Estates residential development as a cohesive visual story. The piece was selected for exhibition at the DCDA Long Beach International Design Invitation Exhibition, hosted at California State University, Long Beach, in 2024, where it was shown among the Best of the Best exhibitors.',
+        'Autumn Estates Reimagined began in my free time, as a serious gamer: one of the games I love is Apex Legends from EA, and what draws me in is its open world design, its maps, scenery and architecture. That pull moved me to take one part of the Olympus map, Autumn Estates, and rebuild it outside the game as a photoreal architectural visualisation. The piece went on to be selected for exhibition at the DCDA Long Beach International Design Invitation Exhibition, hosted at California State University, Long Beach, in 2024, where it was shown among the Best of the Best exhibitors.',
       objective:
-        'To present a residential estate not just as buildings, but as a lived environment, balancing architectural accuracy with the warmth of landscape, light and human scale, to an international exhibition standard.',
+        'To show how much of a game environment could be made to look realistic in our day, and to demonstrate the attention to detail in my work, by redesigning Autumn Estates, one part of Apex Legends’ Olympus map, with the same open world design language that made me fall in love with the game in the first place.',
       process: [
         'Studied the estate layout and identified the viewpoints that would carry the story of the development.',
         'Modelled the structures and surroundings, keeping proportions faithful to the real site.',
