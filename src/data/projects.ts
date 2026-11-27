@@ -62,6 +62,7 @@ import pacetrail5 from '../assets/projects/pacetrail-5.jpg'
 import pacetrail6 from '../assets/projects/pacetrail-6.jpg'
 import pacetrail7 from '../assets/projects/pacetrail-7.jpg'
 import roadplay1 from '../assets/projects/roadplay-1.jpg'
+import roadplayCard from '../assets/projects/roadplay-card.jpg'
 import roadplay2 from '../assets/projects/roadplay-2.jpg'
 import roadplay3 from '../assets/projects/roadplay-3.jpg'
 import tanktrack1 from '../assets/projects/tanktrack-1.jpg'
@@ -79,6 +80,7 @@ import spyyourmoney6 from '../assets/projects/spyyourmoney-6.jpg'
 import aashot1 from '../assets/projects/aashot-1.jpg'
 import aashot2 from '../assets/projects/aashot-2.jpg'
 import aashot4 from '../assets/projects/aashot-4.jpg'
+import aashotCard from '../assets/projects/aashot-card.jpg'
 import tanktrackCard from '../assets/projects/tanktrack-card.jpg'
 import pacetrailCard from '../assets/projects/pacetrail-card.jpg'
 import spyyourmoneyCard from '../assets/projects/spyyourmoney-card.jpg'
@@ -223,6 +225,8 @@ export const projects: Project[] = [
       'A custom-built Android Auto video player developed from the ground up in Kotlin, bringing personal video libraries to the car screen with a companion mobile app.',
     tools: ['Kotlin', 'Android Auto', 'Jetpack Compose'],
     images: [roadplay1, roadplay2, roadplay3],
+    cover: roadplayCard,
+    cardFit: 'cover',
     year: '2026',
     links: [
       {
@@ -403,6 +407,8 @@ export const projects: Project[] = [
       'A Shizuku-powered Android Auto screen-capture tool, built for one reason: clean, true-to-screen captures of a wired AA session when the phone cannot screenshot it and a camera pointed at the head unit will not do.',
     tools: ['Kotlin', 'Shizuku', 'Android Auto'],
     images: [aashot1, aashot2, aashot4],
+    cover: aashotCard,
+    cardFit: 'cover',
     year: '2026',
     caseStudy: {
       overview:
