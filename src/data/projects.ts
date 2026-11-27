@@ -265,7 +265,7 @@ export const projects: Project[] = [
     category: 'Android Applications',
     categories: ['Android Applications'],
     description:
-      'An offline-first fuel-tracking Android app for Ghanaian drivers: automatic trip recording, live trip monitoring, fuel analytics and Android Auto integration.',
+      'An offline-first fuel-tracking Android app for Ghanaian drivers: automatic trip recording, live trip monitoring, fuel analytics and Android Auto integration. Most of its driving-centred features are heavily dependent on cars that have Android Auto in them.',
     tools: ['Kotlin', 'Jetpack Compose', 'MapLibre', 'Android Auto'],
     images: [tanktrack1, tanktrack2, tanktrack3, tanktrack4, tanktrack5, tanktrack6],
     cover: tanktrackCard,
@@ -280,28 +280,28 @@ export const projects: Project[] = [
     ],
     caseStudy: {
       overview:
-        'TankTrack is a fuel-tracking Android application developed for Ghanaian drivers, designed to provide a clearer picture of vehicle fuel consumption, travel patterns and running costs. The idea behind the project was simple: give drivers a practical way to understand how much fuel their vehicles consume, how much they spend on fuel and how efficiently their vehicles perform over time.',
+        'TankTrack is a fuel-tracking Android application developed for Ghanaian drivers, designed to provide a clearer picture of vehicle fuel consumption, travel patterns and running costs. The idea behind the project was simple: give drivers a practical way to understand how much fuel their vehicles consume, how much they spend on fuel and how efficiently their vehicles perform over time. One thing to know up front: most of the features that make TankTrack shine are heavily dependent on cars that have Android Auto in them, where the live driving experience moves from the phone to the infotainment screen; the logging, analytics and privacy features remain usable on any Android phone.',
       objective:
-        'To build a reliable and privacy-focused fuel management application that helps Ghanaian motorists monitor their fuel consumption, track journeys and make informed decisions about vehicle running costs. The project also aimed to extend this experience beyond the phone by integrating TankTrack with Android Auto, allowing drivers to access relevant trip information directly from the vehicle\u2019s infotainment system.',
+        'To build a reliable and privacy-focused fuel management application that helps Ghanaian motorists monitor their fuel consumption, track journeys and make informed decisions about vehicle running costs. The project also aimed to extend this experience beyond the phone by integrating TankTrack with Android Auto, allowing drivers in cars that have Android Auto built in to access relevant trip information directly from the infotainment system.',
       process: [
         'Combined manual fuel logging with automatic trip recording to calculate real-world fuel consumption and driving expenses.',
         'Built with an offline-first approach: no personal data uploaded to external servers, and fuel prices based on actual prices entered by users across Ghana\u2019s six fuel companies rather than estimated figures.',
-        'Evolved the app through continuous development and iterative testing from a basic fuel-logging tool into a comprehensive vehicle-monitoring system with live trip tracking, interactive maps, fuel analytics and Android Auto integration.',
+        'Evolved the app through continuous development and iterative testing from a basic fuel-logging tool into a comprehensive vehicle-monitoring system with live trip tracking, interactive maps, fuel analytics and Android Auto integration, with the in-car experience dependent on vehicles that have Android Auto.',
       ],
       outcome:
-        'A feature-rich vehicle and fuel management application, combining live trip tracking, interactive maps, fuel analytics, data management and Android Auto integration.',
+        'A feature-rich vehicle and fuel management application, combining live trip tracking, interactive maps, fuel analytics, data management and Android Auto integration, with the in-car experience heavily dependent on cars that have Android Auto in them.',
       features: [
         { name: 'Fuel logging', detail: 'Record fuel purchases, fill-ups, quantities, prices and expenses to build a detailed fuel history.' },
         { name: 'Automatic trip recording', detail: 'Capture journeys automatically through a foreground service while driving.' },
         { name: 'Fuel consumption analytics', detail: 'Calculate actual fuel consumption, estimated fuel usage and vehicle running costs using recorded data.' },
-        { name: 'Live trip monitoring', detail: 'Display distance travelled, speed, journey duration and estimated fuel consumption in real time.' },
+        { name: 'Live trip monitoring', detail: 'Display distance travelled, speed, journey duration and estimated fuel consumption in real time, on the phone and, in cars with Android Auto, on the infotainment screen.' },
         { name: 'Interactive mapping', detail: 'Integrated MapLibre maps that follow the vehicle\u2019s movement and draw the route as the journey progresses.' },
         { name: 'Trip history', detail: 'Review recorded journeys, manage trip records and benefit from additional safeguards against accidental deletion.' },
         { name: 'Data export', detail: 'Export and preserve recorded information for personal records and future reference.' },
         { name: 'Customisable interface', detail: 'A Material-themed interface with six selectable colour themes, supporting both light and dark modes.' },
         { name: 'Offline-first privacy', detail: 'Keep fuel records and trip information stored locally on the device without uploading personal data to external servers.' },
-        { name: 'Android Auto integration', detail: 'A live driving information card on compatible car infotainment systems, showing distance, speed, elapsed time, estimated fuel consumption and an animated route sparkline.' },
-        { name: 'Extended car dashboard (in development)', detail: 'Work is ongoing to unlock a more comprehensive parked-mode dashboard on the car\u2019s display, featuring analytics cards, route visualisation and additional fuel insights.' },
+        { name: 'Android Auto integration', detail: 'A live driving information card on car infotainment systems, showing distance, speed, elapsed time, estimated fuel consumption and an animated route sparkline, available in vehicles with Android Auto built in.' },
+        { name: 'Extended car dashboard (in development)', detail: 'Work is ongoing to unlock a more comprehensive parked-mode dashboard on the car\u2019s display in Android Auto vehicles, featuring analytics cards, route visualisation and additional fuel insights.' },
       ],
       note: 'Personal project, design, development and release.',
     },
