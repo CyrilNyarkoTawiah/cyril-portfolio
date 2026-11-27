@@ -410,6 +410,16 @@ export const projects: Project[] = [
     cover: aashotCard,
     cardFit: 'cover',
     year: '2026',
+    links: [
+      {
+        label: 'GitHub repository',
+        url: 'https://github.com/CyrilNyarkoTawiah/AAShot',
+      },
+      {
+        label: 'Download the app',
+        url: 'https://github.com/CyrilNyarkoTawiah/AAShot/releases/tag/v0.3.0',
+      },
+    ],
     caseStudy: {
       overview:
         'AAShot exists because of a portfolio problem. I needed clean screenshots of my Android Auto apps for the very page you are reading, and Android Auto would not cooperate: the phone cannot screenshot the AA rendering on the car display, and photographing the head unit with a camera produces glare and crooked frames. Rather than settle for bad images of good work, I built the tool that takes them properly.',
