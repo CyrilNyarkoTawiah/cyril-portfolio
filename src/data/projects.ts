@@ -301,7 +301,7 @@ export const projects: Project[] = [
         { name: 'Customisable interface', detail: 'A Material-themed interface with six selectable colour themes, supporting both light and dark modes.' },
         { name: 'Offline-first privacy', detail: 'Keep fuel records and trip information stored locally on the device without uploading personal data to external servers.' },
         { name: 'Android Auto integration', detail: 'A live driving information card on car infotainment systems, showing distance, speed, elapsed time, estimated fuel consumption and an animated route sparkline, available in vehicles with Android Auto built in.' },
-        { name: 'Extended car dashboard (in development)', detail: 'Work is ongoing to unlock a more comprehensive parked-mode dashboard on the car\u2019s display in Android Auto vehicles, featuring analytics cards, route visualisation and additional fuel insights.' },
+        { name: 'Extended car dashboard (future release)', detail: 'A more comprehensive parked-mode dashboard on the car\u2019s display, with analytics cards, route visualisation and additional fuel insights. The Android Auto projection version will not work for now, so the feature is kept for a future release when the platform allows it.' },
       ],
       note: 'Personal project, design, development and release.',
     },
