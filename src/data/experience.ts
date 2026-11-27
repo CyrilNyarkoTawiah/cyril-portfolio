@@ -17,7 +17,7 @@ export const roles: Role[] = [
     points: [
       'Institutional graphic design and branding.',
       'Annual reports, brochures, banners and promotional materials.',
-      'Video editing and multimedia production.',
+      'Video editing and multimedia production, with projects for Farm Academy, WFP and more.',
       'Motion graphics and 3D modelling.',
       'Digitisation and information-systems projects.',
     ],
