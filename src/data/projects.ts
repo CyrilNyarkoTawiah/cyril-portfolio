@@ -444,11 +444,11 @@ export const projects: Project[] = [
     images: [csir1, csir2, csir3, csir4, csir5, csir6, csir7, csir8],
     year: '2022–Present',
     links: [
-                {
-          label: 'View on Behance',
-          url: 'https://www.behance.net/gallery/198044169/Project-CSIR-INSTI-Modeling-and-animation',
-        },
-      ],
+      {
+        label: 'Watch on YouTube',
+        url: 'https://www.youtube.com/watch?v=CZ8FqCtD_I0',
+      },
+    ],
     caseStudy: {
         overview:
           'A 3D modelling and animation study of the CSIR-Institute for Scientific and Technological Information (INSTI), the institute where I serve as Senior Graphic Designer / Technical Officer. The piece carries the institute’s buildings and grounds into three dimensions, rendered and set in motion.',
@@ -460,7 +460,7 @@ export const projects: Project[] = [
           'Finished the renders and motion pieces to the same visual standard as the institute’s print identity.',
         ],
         outcome:
-          'A 3D visualisation and animation set for the institute, published on Behance and used alongside the institute’s design and multimedia work.',
+          'A 3D visualisation and animation set for the institute, published as an animation on the institute’s official YouTube channel and used alongside the institute’s design and multimedia work.',
         note: 'Produced within my role at CSIR-INSTI.',
       },
   },
